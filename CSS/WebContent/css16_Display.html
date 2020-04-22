@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>display property</title>
+<style>
+	li{
+		background: skyblue;
+		border:1px solid grey;
+		padding : 10px;
+		display : inline;	
+	}
+	span {
+	  border: 1px solid black;
+	  display: block;
+   }
+  
+   h1.hidden {
+  		display: none;
+	}
+ 
+	h1#myh1 {
+  		visibility: hidden;
+	}
+</style>
+
+</head>
+<body>
+	<!--  display의 기본 표시값은   block 또는 inline에 사용 -->
+	<p>li는 기본적으로 block level이다. </p>
+	<ul>
+  	<li><a href="#" target="_blank">HTML</a></li>
+  	<li><a href="#" target="_blank">CSS</a></li>
+  	<li><a href="#" target="_blank">JavaScript</a></li>
+  	<br><br>
+  	<p>span는 기본적으로  inline 입니다. display를 이용하면 block 변경 </p>
+  	<span>A display property with a value of "block" results in</span> 
+	<span>a line break between the two elements.</span>
+  
+  	<h1 id = "myh1">This is a visible heading</h1>
+	<h1 class="hidden">This is a hidden heading</h1>
+	<br><br>
+ </ul>
+</body>
+</html>

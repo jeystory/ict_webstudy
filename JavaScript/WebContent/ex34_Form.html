@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Validation : 유효성 검사 </title>
+<script type="text/javascript">
+	function validateForm() {
+	  var x = document.forms["myForm"]["fname"].value;
+	  if (x == "") {
+	    alert("이름 정보를 입력하세요.");
+	    return;
+	  }
+	}
+	function send_go(f) {
+		var x = f.f_age.value;
+		if (x == "") {
+		    alert("나이 정보를 입력하세요.");
+		    return;
+		  }
+		f.action="";
+		f.submit();
+	}
+	function send_go2() {
+		var x = document.myForm2.f_addr.value;
+		if (x == "") {
+		    alert("거주지 정보를 입력하세요.");
+		    return;
+		  }
+		document.myForm2.action="";
+		document.myForm2.submit();
+	}
+	function send_go3() {
+	//	var x = document.forms["myForm3"]["f_tel"].value ;
+		var x = document.forms[3]["f_tel"].value ;
+		if (x == "") {
+		    alert("전화번호 정보를 입력하세요.");
+		    return;
+		  }
+		document.myForm3.action="";
+		document.myForm3.submit();
+	}
+	
+</script>
+</head>
+<body>
+  <form name="myForm" action="ex34_Form.html" 
+  		onsubmit="return validateForm()" method="post">
+      Name: <input type="text" name="fname">
+  	<input type="submit" value="Submit">
+ </form>
+ <form method="post">
+      age: <input type="text" name="f_age">
+  	<input type="button" value="보내기" onclick="send_go(this.form)">
+ </form>
+ <form name ="myForm2" method="post">
+      addr: <input type="text" name="f_addr">
+  	<input type="button" value="보내기" onclick="send_go2()">
+ </form>
+ <form name ="myForm3" method="post">
+      tel: <input type="text" name="f_tel">
+  	<input type="button" value="보내기" onclick="send_go3()">
+ </form>
+
+ <!-- 자바스크립트로 고치면 required 실행 안됨  -->
+ <form  method="post">
+      gender: <input type="text" name="f_gender1" required>
+  	<input type="submit" value="보내기">
+ </form>
+ 
+</body>
+</html>
+
+
+
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>margin</title>
+<style>
+	div {
+  		border: 1px solid black;
+  		/*margin : 50px;*/
+  		/*margin : 50px 100px; */ /* top & bottom, right&left*/
+ 	 	margin: 100px 100px 150px 80px;  /* top right bottom left */
+  		background-color: lightblue;
+	}
+	
+	div.mydiv{
+		background-color: tomato;
+		text-align:center;
+		margin:0px;
+	}
+	
+	div.mydiv2{
+		background-color: skyblue;
+		width:200px;
+		margin:auto;	/* 가운데 정렬 */
+	}
+	
+	div#mydiv3{
+		border: 5px solid red;
+		margin-left:100px;
+	}
+	
+	p.ex1{
+		margin-left: inherit;
+		border:inherit;
+	}
+
+</style>
+</head>
+<body>
+<!-- 밖여백  지정 순서 : 위 오른쪽 아래 왼쪽 (시계방향)
+	margin-top, margin-right, margin-bottom, margin-left
+	
+-->
+	<h2>Using individual margin properties</h2>
+	<div>This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left margin of 100px.</div>
+	<div class=mydiv>
+		This div will be horizontally centered because it has margin: auto;
+	</div>
+	<div class=mydiv2>
+		This div will be horizontally centered because it has margin: auto;
+	</div>
+	<!-- 상속값 ; 부모요소에서 상속 받는것  -->
+	<div id="mydiv3">
+		<p class="ex1">This paragraph has an inherited left margin (from the div element).</p>
+	</div>
+	<hr>
+</body>
+</html>

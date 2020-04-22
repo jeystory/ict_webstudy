@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>class attribute</title>
+
+<style>
+	.cities {
+  		background-color: black;
+  		width:40%;
+  		color: white;
+  		margin: 20px;
+  		padding: 20px;
+	}
+	
+	.note {
+  		font-size: 120%;
+  		color: red;
+  		font-weight: bold;	
+	}
+	
+	.city{
+		background-color: tomato;
+  		width:40%;
+  		color: white;
+  		padding: 20px;
+	}
+	
+	.main{
+		text-align: center;
+	}
+</style>
+
+</head>
+<body>
+<!-- 동일한 클래스 이름 가진 여러개의 요소들에게 동일한 스타일을 적용할 때 사용 
+	따라서, 동일한 class 속성을 가진 요소는 동일한 스타일일 갖는다.
+	보통<style>를 사용해서 스타일을 지정. **<style>에서는 .(점)으로 표현된다.
+	class 속성은 CSS, jQuery, Ajax에서는 선택자라고 한다.
+	선택자란 특정한 태그를 선택하는 속성을 지닌 것을 의미
+	** 자바 스크립트에서 document.getElementsByClassName("")으로  선택가능
+-->
+
+	<div class="cities">
+  		<h2>London</h2>
+  		<p>London is the capital of England.</p>
+	</div>
+
+	<div class="cities">
+  		<h2>Paris</h2>
+  		<p>Paris is the capital of France.</p>
+	</div>
+
+	<div>
+  		<h2>Tokyo</h2>
+  		<p>Tokyo is the capital of Japan.</p>
+	</div>
+	
+	<h1>My <span class="note">Important</span> Heading</h1>
+	<p>This is some <span class="note">important</span> text.</p>
+	
+	<!--  하나가 여러개의 클래스를 소유하는 경우 -->
+	<h2 class="city main">London</h2>
+	<h2 class="city">Paris</h2>
+	<h2 class="city">Tokyo</h2>
+	
+	<!--  다른 종류의 태그라도 같은 클래스를 사용가능 -->
+	<hr>
+	<h2 class="city">Paris</h2>
+	<p class="city">Paris is the capital of France</p>
+	
+</body>
+</html>

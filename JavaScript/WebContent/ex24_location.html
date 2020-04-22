@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Location : URL 정보를 가져오는 객체</title>
+<script type="text/javascript">
+    // URL
+	document.write("URL : " + location);
+	document.write("<hr>");
+	// 호스트
+	document.write("HOST : " + location.host);
+	document.write("<hr>");
+	// **링크  
+	document.write("href : " + location.href);
+	document.write("<hr>");
+	// 도메인
+	document.write("domain : " + location.pathname);
+	document.write("<hr>");
+	// 프로토콜
+	document.write("protocol : " + location.protocol);
+	document.write("<hr>");
+	// 검색 : ? 뒤에 글자
+	document.write("search : " + location.search);
+	document.write("<hr>");
+	// 검색 : # 뒤에 글자
+	document.write("hash : " + location.hash);
+	document.write("<hr>");
+</script>
+<script type="text/javascript">
+	//자바스크립트에서 페이지이동은 location.href
+	function send_go1() {
+		location.href ="http://www.naver.com";
+	}
+	function send_go2(doc) {
+		location.href = doc;
+		open(doc,"_blank","width=400, height=200 ");
+	}
+</script>
+</head>
+<body>
+<form>
+	<input type="button" value="이동하기 1" onclick="javascirpt:alert('자바스크립트 직접 호출')">
+	<input type="button" value="이동하기 2" onclick="alert('자바스크립트 직접 호출 2')">
+	<input type="button" value="이동하기 3" onclick="send_go1()">
+	<input type="button" value="이동하기 4" onclick="send_go2('ex23_Array.html')">
+</form>
+</body>
+</html>

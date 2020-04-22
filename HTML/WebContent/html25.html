@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>iframes : 웹페이지 내에서 다른 웹페이지를 표시할 때 사용</title>
+</head>
+<body>
+<!-- 
+	형식 : <iframe src="URL"></iframe>
+			width, height, style="border"
+			target 과 name을 이용해서 링크 사용가능.
+ -->
+<iframe src="html22.html" height="200" width="300"></iframe>
+<iframe src="html22.html" height="200" style="width:100%"></iframe>
+<iframe src="html22.html" height="200" style="width:100%" scrolling="no"></iframe>
+<iframe src="html23.html" height="200" style="width:100%" name="doc24"></iframe>
+<p><a href = "html24.html" target="doc24">문서 가져오기</a> </p>
+<iframe src="html24.html" style="border:none;"></iframe>
+</body>
+</html>

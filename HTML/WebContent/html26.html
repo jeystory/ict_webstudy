@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script tag</title>
+</head>
+<body>
+<!-- 
+	JavaScript는 html 페이지를 보다 역동적이고 대화식으로 만들어줌
+	<script>태그는 JavaScript를 정의하는데 사용한다.
+     html에서는 보통 id를 호출 할때 많이 사용한다.(class도 호출 할수 있다.)
+ -->
+ 
+<h1>My First JavaScript</h1>
+<!-- 
+	버튼 태그는 보통 자바스크립트를 호출할 때 사용
+	onClick() : 버튼이 클릭되면 자바스크립트가 실행
+	** document.getElementById('demo') => demo 아이디를 가진 요소 선택
+	** innerHTML() => 해당 요소에 html을 get 하거나 set  할 때 사용
+	const content = element.innerHTML; getter
+	element.innerHTML=htmlString ; setter 
+	Date() => 현재 시스템의 날짜를 가져오는 자바스트립트의 내장 함수 => 자바의 메소드와 같음
+	
+	 ** html의 스타일도 변경할 수 있다.
+      document.getElementById("demo2").style.
+     
+     ** html의 속성도 변경 및 설정 .
+     document.getElementById("demo2").속성
+     
+	-->
+<button type="button"
+	onclick="document.getElementById('demo').innerHTML = Date()">
+	Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+<!-- 바로스크립트 실행  -->
+<script>
+	
+  	/*document.getElementById("demo").innerHTML = "Hello JavaScript!";
+  	document.getElementById("demo").innerHTML = "<h2>Hello JavaScript!</h2>";*/
+  	document.getElementById('demo').innerHTML
+    = "<h2 style='color:red'>Hello</h2>";
+</script>
+	
+<!-- 스타일도 줄 수 있다. -->
+<p id="demo2"></p>
+<script type="text/javascript">
+	document.getElementById('demo2').innerHTML = "ICT인재교육원";
+	document.getElementById('demo2'). style.fontsize="25px";
+	document.getElementById('demo2').style.color="red";
+	document.getElementById('demo2').style.backgroundColor="yellow";
+</script>
+
+	<img id="myimg" alt="" src="">
+	<!--  html의 속성 변경 및 설정 -->
+	<script type="text/javascript">
+		document.getElementById('myimg').src="img/pic_bulbon.gif"
+	</script>
+	<button onclick="document.getElementById('myimg').src='img/pic_bulboff.gif'">끄기</button>
+	<button onclick="document.getElementById('myimg').src='img/pic_bulbon.gif'">켜기</button>
+</body>
+</html>

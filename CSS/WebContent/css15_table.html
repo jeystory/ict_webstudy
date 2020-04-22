@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table</title>
+<style type="text/css">
+
+	table.first {
+	   border: 1px solid #333333;
+    }
+    table.second,table.second th,table.second td { 
+	   border: 1px solid #333333;
+    }
+
+    table.third, table.third th,table.third td {
+	   border: 1px solid #333333;
+	   border-collapse: collapse;
+    }
+     
+    table.third{
+    	width: 80%;
+    	margin: auto;
+    }
+    table.third th,table.third td{
+    	height: 50px;
+    	text-align: center;
+    }
+   
+    table.fourth{
+      width: 80%;
+      margin: auto;
+      border-collapse: collapse;
+    }
+     table.fourth th, table.fourth td{
+    	height: 50px;
+    	text-align: center;
+    	border-bottom: 1px solid grey;
+    	
+    }
+    /*그냥 테스트해본거 */
+    table.fourth th{	
+    	vertical-align: bottom;	
+    }
+    /*그냥 테스트해본거 */
+    table.fourth td{
+    	vertical-align: top;
+    }
+     
+     
+     /* tr:nth-child(even) :(짝수줄) tr:nth-child(odd)(홀수줄) */
+    table.fourth tr:nth-child(even) {
+        background: rgba(255,0,0,0.6);
+     }
+     table.fourth tr:nth-child(odd) {
+        background: rgba(0,255,0,0.3);
+     } 
+     
+     table.fourth tr:hover{
+        background: rgba(100,100,100,0.2);
+     }
+     
+     table.fourth tr:hover{
+        background: rgba(50,50,50,0.2);
+     }
+     
+</style>
+</head>
+<body>
+<h2>Add a border to a table:</h2>
+<table class="first">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+<hr>
+<table class="second">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+<hr>
+<table class="third">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+<hr>
+<table class="fourth">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+</body>
+</html>

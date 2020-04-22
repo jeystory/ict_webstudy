@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Callback Functions</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+	   // callback 사용 X
+ 		$("#btn1").click(function() {
+			$("p").hide("slow");
+			alert("hide 완성");
+		});
+ 		
+ 		// callback 함수 사용
+ 		$("#btn2").click(function() {
+			$("p").hide("slow", function() {
+				alert("hide 완성");
+			});			
+		});
+   });
+</script>
+</head>
+<body>
+	<button id ="btn1"> Not Callback </button>
+	<button id ="btn2"> Callback </button>
+	<p> Hello </p>
+</body>
+</html>

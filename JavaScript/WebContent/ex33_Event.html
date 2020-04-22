@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 이벤트</title>
+
+<script type="text/javascript">
+	 function TurnOn() {
+		document.getElementById("bulb1").src="images/pic_bulbon.gif"
+		
+	}
+	function TurnOff() {
+		document.getElementById("bulb1").src="images/pic_bulboff.gif"
+	}
+	
+	 function TrunOnMouseOver() {
+			document.getElementById("bulb2").src="images/pic_bulbon.gif"
+			
+		}
+		function TrunOffMouseOut() {
+			document.getElementById("bulb2").src="images/pic_bulboff.gif"
+		}
+	
+</script>
+</head>
+<body>
+	<div >
+		<img id="bulb1" src="images/pic_bulboff.gif">
+	</div> 
+	<div >
+		<button onclick="TurnOn()">Turn On</button>
+		<button onclick="TurnOff()">Turn Off</button>
+	</div>
+		
+	<span onmouseover="TrunOnMouseOver()" onmouseout="TrunOffMouseOut()">
+  	 	<img id="bulb2" src="images/pic_bulboff.gif">
+  	</span>
+</body>
+</html>

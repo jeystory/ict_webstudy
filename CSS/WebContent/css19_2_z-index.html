@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>z-index : 요소 쌓는 순서 지정</title>
+<style type="text/css">
+	div{
+		width: 200px;
+		height: 200px;
+		border: 1px solid black;
+	}	
+	h1{
+		font-size: 60px;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	div#count1{
+		background: #ffff00;
+		position: fixed;
+		top :10px;
+		left:10px;
+		z-index:  5;		/*높은 숫자일수록 위에 배치*/
+	}
+	div#count2{
+		background: #ff00ff;
+		position: fixed;
+		top :180px;
+		left:25px;
+		z-index : 3;
+	}
+	div#count3{
+		background: #00ffff;
+		position: fixed;
+		top :25px;
+		left:160px;
+		z-index : 1;
+	}
+</style>
+</head>
+<body>
+	<!-- z-index : ** 요소 쌓는 순서 지정 (가장 먼저 삽입하는 요소가 1이다.) 
+               ** -1는 텍스트 뒤에 배치된다.
+	-->
+	<div id="count1">
+		<h1>A</h1>
+	</div>
+	<div id="count2">
+		<h1>B</h1>
+	</div>
+	<div id="count3">
+		<h1>C</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ProgreesBar</title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+     	$("#btn").click(function() {
+			$("#box").animate({ width:"400px"},
+			    			  { duation:"slow",
+				                step:function(x){
+					             $("#demo").text(Math.round(x * 100/400) + "%")
+				               }
+			});
+		});
+   });
+</script>
+</head>
+<body>
+<button id="btn">Start Button</button>
+	<div style="border: 1px solid green; margin: 10px; width: 400px;">
+		<div id="box" style="background-color: #98bf21;
+			height: 50px; width: 1px; border: 1px solid green"></div>
+	</div>
+	<p id="demo"></p>
+</body>
+</html>

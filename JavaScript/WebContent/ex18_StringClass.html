@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String Class</title>
+<script type="text/javascript">
+	var str1 = "hello";
+	var str2 = new String("안녕하세요.");
+	
+	// print
+	document.write(str1 + "<br>");
+	document.write(str2 + "<br>");
+	
+	//length
+	document.write(str1.length + "<br>");
+	document.write(str2.length + "<br>");
+	
+	//charAt(n) : n번째 문자 구하기
+	document.write(str1.charAt(0) + "<br>")
+	
+	//concat(str) : 문자열 뒤쪽에 매개변수 문자열 연결
+	document.write(str1.concat("World~~") + "<br>")
+	
+	//indexOf('문자|문자열') : 해당 문자 또는 문자열에 위치값 구하기, 정규식 사용못함, -1은 없다는 의미
+	document.write(str1.indexOf('l') + "<br>")
+	///indexOf('문자|문자열', 검색시작위치) -> 두번째 'ㅣ'의 문자 위치 
+	document.write(str1.indexOf('l', str1.indexOf('l')+1 ) + "<br>")
+	
+	//lastIndexOf('문자|문자열') : 해당 문자| 문자열 마지막 위치값
+	document.write(str1.lastIndexOf('l') + "<br>")
+	
+	//** search('문자|문자열') : 해당 문자 또는 문자열에 위치값 구하기, 정규식 사용가능
+	document.write(str1.search('l') + "<br>")
+	
+	//slice(시작, 끝) : 끝은 포함하지 않음. 음수는 문자열 끝부터 시작 -1부터 시작
+	str = "Apple, Banana, Kiwi";
+	document.write(str.slice(7,13) + "<br>");
+	document.write(str.slice(-5) + "<br>");
+	document.write(str.slice(-5,-1) + "<br>");
+	document.write(str.slice(-12,-6) + "<br>");
+	
+	//substring : slice와 같음
+	document.write(str.substring(7,13) + "<br>");
+	//document.write(str.substring(-5) + "<br>");  모든 문자를 다 출력
+	
+	//** substr(시작, 갯수)
+	document.write(str.substr(7,6) + "<br>");
+	document.write(str.substr(-4,4) + "<br>");
+	document.write(str.substr(-12) + "<br>");
+	
+	str1 = "Apple, Banana, Kiwi";
+	// replace(old, new) : 치환
+	document.write(str1.replace("Banana","Mango")+"<br>")
+	
+	// toUpperCase() : 대문자로 변경, toLowerCase() ; 소문자로 변경
+	document.write(str1.toUpperCase() +"<br>");
+	document.write(str1.toLowerCase() +"<br>");
+	
+	// trim() : 앞뒤 공백 제거
+	str1 = "  Apple  ";
+	document.write(str1.length+"<br>");
+	document.write(str1.trim().length+"<br>");
+	
+	//split(구분자) : 구분자를 이용해서 문자열을 배열로 저장
+	str1 = "Apple, Banana, Kiwi";
+	var arr = str1.split(",");
+	for ( var k in arr) {
+		document.write(k +"=" + arr[k]+"<br>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

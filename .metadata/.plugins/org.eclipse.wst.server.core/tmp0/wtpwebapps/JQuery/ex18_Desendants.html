@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery  - Descendants</title>
+<style>
+	.descendants * { 
+  		display: block;
+  		border: 2px solid lightgrey;
+  		color: lightgrey;
+  		padding: 5px;
+  		margin: 15px;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script>
+	// children() :   all direct children of the selected element
+	// The find()  : descendant elements of the selected element, all the way down to the last descendant.
+	$(function(){
+		$("div").children().css("color","red");
+		$("div").children("p:first").css({"color": "red", "border": "2px solid red"});
+		$("div").children("p.second").css({"color": "blue", "border": "2px solid blue"});
+		$("div").children("p:last").css({"color": "green", "border": "2px solid green"});
+		
+		$("div").find("*").css("background","skyblue");
+		//$("div").find("*").css("color","black");
+		$(".first").find("*").css("color","black");
+	});
+</script>
+</head>
+<body>
+	<div class="descendants" style="width:500px;">div (current element) 
+  <p class="first">p (child)
+    <span>span (grandchild)</span>   
+  </p>
+  <p class="second">p (child)
+    <span>span (grandchild)</span>
+  </p> 
+   <p class="first">p (child)
+    <span>span (grandchild)</span>
+  </p> 
+</div>
+	
+</body>
+</html>

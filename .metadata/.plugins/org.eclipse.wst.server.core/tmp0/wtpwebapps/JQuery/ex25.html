@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animate를 이용한 애니메이션 </title>
+<style type="text/css">
+	#mydiv{position: absolute;}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+
+	   $("#btn1").click(function() {
+		 $("#mydiv").animate({left:"+=1000"},3000);
+	  });
+     
+     $("#btn2").click(function() {
+		 $("#mydiv").stop();
+	  });
+   });
+</script>
+</head>
+<body>
+<p><button id="btn1">이동</button></p>
+<p><button id="btn2">멈춤</button></p>
+<div id="mydiv">
+   <img alt="" src="images/image1.gif">
+</div>
+</body>
+</html>

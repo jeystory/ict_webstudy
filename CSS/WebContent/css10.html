@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Text</title>
+<style type="text/css">
+ h1{color: green; text-align:center}
+ div{ 
+ 	margin:auto;
+  	border: 1px solid black;
+  	padding: 10px;
+  	width: 200px;
+  	height: 200px;
+  	text-align: justify;	/*양쪽 정렬 : 보더에 양쪽 넓이에 맞춰서 글자들 사이에 여백을 줌*/
+  	overflow:hidden;	/* 보더라인 넘어가는 텍스트는 안보이게 만들어줌 */
+ }
+ 
+h2 {text-decoration: overline;}
+h3{text-decoration: line-through;}
+h4{text-decoration: underline;}
+
+p.uppercase {text-transform: uppercase; text-indent:50px; letter-spacing: 3px;}
+p.lowercase { text-transform: lowercase; margin-left : 50px}
+p.capitalize {text-transform: capitalize; letter-spacing: -3px;}
+
+p.ex1 { direction: rtl}
+
+h1.shadow{text-shadow: 10px 10px lightgreen;}	/*x,y, color*/
+ 
+img.top { vertical-align: text-top;}
+img.middle { vertical-align: middle;}
+img.bottom {vertical-align: text-bottom;}
+ img.float{float: right;}
+ 
+</style>
+</head>
+<body>
+<!-- 
+	글자색 : color : 색;
+	정렬 : text-align: right, left, center;
+	글자 꾸미기 : text-decoration : overline, line-through or underline
+	text-transform: uppercase, lowercase, or capitalize
+	text-indent : 글자 들여쓰기 -> margin을 써도 같은 효과가 남.
+	letter-spacing : 글자간의 간격
+	line-height : 줄간격
+	direction : rtl (right to left),  ltr(left to right -default)
+	vertical-align : 그림과 이미지 속성에 
+	
+ -->
+ 	<h1>This is heading 1</h1>
+	<p>This is an ordinary paragraph.  Notice that this text is blue. 
+   The default text color for a page is defined in the body selector.</p>
+    
+    <p>The text-align: justify; value stretches the lines so that each line has equal width (like in newspapers and magazines).</p>
+
+	<div>
+		In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'
+	</div>
+	 <!-- text-decoration  -->
+	<h2>This is heading 1</h2>
+	<h3>This is heading 2</h3>
+	<h4>This is heading 3</h4>
+	
+	<p><del>this text is del</del></p>
+	<p><ins>this text is ins</ins></p>
+	
+	<p class="uppercase">This is some text.</p>
+	<p class="lowercase">This is some text.</p>
+	<p class="capitalize">This is some text.</p>
+	
+	<p class="ex1"><bdo dir="rtl">This is right-to-left text direction.</bdo></p>
+	
+	<h1 class ="shadow">This is heading 1</h1>
+	<hr>
+	<p><img class="top" alt="" src="images/back01.png">이미지와 글자 정렬하기</p><br>
+	<p><img class ="bottom" alt="" src="images/back01.png">이미지와 글자 정렬하기</p><br>
+	<p><img class = "middle" alt="" src="images/back01.png">이미지와 글자 정렬하기</p>
+	<p><img class="float" src="images/back01.png">이미지와 글자의 위치하기  </p><br>
+
+</body>
+</html>

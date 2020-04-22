@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>콜백함수</title>
+<script type="text/javascript">
+// 콜백함수 : 어떤 이벤트가 발생한 후, 수행될 함수를 의미합니다.
+//          함수내부의 처리 결과값을 함수 외부로 내볼낼 때 사용
+//          함수를 하나의 매개변수로 사용하는 것, 보통은 비동기 프로그래밍
+//   function 함수이름(callback){
+//        실행문;
+//        callback(결과);
+//    }
+//    
+
+    function myfunc() {
+		alert("경고메세지1");
+   }
+   function send_go1() {
+	  // 3초후 myfunc() 함수를 호출
+	  // setTimeout(콜백함수, milliseconds);
+	  // setTimeout(() => {}, milliseconds);
+	   setTimeout(myfunc, 3000);
+   }
+  function send_go2() {
+	  // 익명함수를 이용한 것
+     setTimeout(function() {
+    	  alert("경고메세지2");
+	  }, 3000);	
+  }
+  function send_go3() {
+	  // 자바에서는 람다식  , 자바스크립트에서는 화살표함수 : ([매개변수])=>{실행내용}
+	  // 람다식 예
+      // var func1 = function(text) {return 실행 내용 };
+      // var func1 = (text=>실행내용);
+      setTimeout(()=>{alert("경고메세지3")}, 3000);
+   }
+ 
+  function send_go4() {
+	var cnt = 0 ;
+	// 시간 경과 훙 반복실행(1초마다 실행)
+	setInterval(() => {
+		 cnt++;
+		 document.write(cnt+"번 안녕하세요<br>");
+	}, 1000);
+}
+</script>
+</head>
+<body>
+	<button onclick="send_go1()">클릭1</button>
+	<button onclick="send_go2()">클릭2</button>
+	<button onclick="send_go3()">클릭3</button>
+	<button onclick="send_go4()">클릭4</button>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>background</title>
+<style type="text/css">
+/*  body{background-color: lightblue;} */
+/* 한번에 지정 가능 : color image repeat attachment position 순서 */
+
+body{
+	background-image: url("images/back01.png");
+	background-repeat: repeat;	/* 바둑판식 */
+	background-repeat: repeat-x;	/*  x-축만 */
+	background-repeat: repeat-y;	/*  y-축만 */
+	background-repeat: no-repeat; /* 바둑판제거*/
+	background-position: right top;	/* 오른쪽 상단  */
+	background-attachment: scrolled    
+	/*fixed : 페이지에 그림의 위치가 고정. 페이지가 위아래로 이동해도 화면에 같은 위치에 나타나게
+	scrolled : 페이지가 위나 아래로 이동해도 그림은 원래 위치에 존재하게 이동하면 이름이 보이지 않음. */
+}
+
+ body{
+ 	background: #ffffff url("images/back02.jpg") no-repeat right top;
+  	/* 하나의 이미지를 화면 크기에 맞춰서 보여줄때 늘리거나 보여줄때*/
+  	background-size: cover;
+ }
+
+
+</style>
+</head>
+<body>
+<!--
+	background-color 
+	background-image
+	background-repeat : 배경그림 반복(바둑판 배열)
+	background-attachment : 첨부
+	background-position : 위치
+  -->
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+</body>
+</html>

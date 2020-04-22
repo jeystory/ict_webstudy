@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>display:inline, block, inline-block</title>
+<style type="text/css">
+	span.a{
+		display: inline;
+		width: 100px;  /* 실행 안됨 */
+		height: 100px; /* 실행 안됨 */
+		padding: 5px;  /* 실행됨  */
+		margin:  5px;   /* 실행됨 */
+		border: 1px solid blue;
+		background-color: yellow;
+	}
+	
+	span.b{
+		display: inline-block;
+		width: 100px;  /* 실행 안됨 */
+		height: 100px; /* 실행 안됨 */
+		padding: 5px;  /* 실행됨  */
+		margin:  5px;   /* 실행됨 */
+		border: 1px solid blue;
+		background-color: yellow;
+	}
+	
+	span.c{
+		display: block;
+		width: 100px;   
+		height: 100px; 
+		padding: 5px;  
+		margin:  5px;   
+		border: 1px solid blue;
+		background-color: yellow;
+	}
+
+</style>
+</head>
+<body>
+	<!--
+	display:inline은 상단 및 하단 실행 안됨
+	display:block 옆에 붙일 수 없다.
+	display:inline-block : 옆에 붙일 수 있으며, 상단 및 하단, 여백/패딩 존중 
+  -->
+ 			<h1>The display Property</h1>
+
+ 			<h2>display: inline</h2>
+ 			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. 
+ 				<span class="a">Aliquam</span>
+ 				<span class="a">venenatis</span> 
+ 				gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. 
+ 			</div>
+
+ 			<h2>display: inline-block</h2>
+ 			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. 
+ 				<span class="b">Aliquam</span>
+ 				<span class="b">venenatis</span>
+ 				 gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. 
+ 			</div>
+
+ 		<h2>display: block</h2>
+ 		<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. 
+ 			<span class="c">Aliquam</span>
+ 	 		<span class="c">venenatis</span> 
+ 	 		gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. 
+ 	 	</div>
+</body>
+</html>

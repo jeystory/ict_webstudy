@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Event Methods</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+	$(function() {
+		// 마우스 이벤트 : click, dblclick, mouseenter(=mouseover), mouseleave(= mouseout) 
+		  // 키보드 이벤트 : keypress, keydown, keyup              
+		  // form 이벤트 : submit, change, focus, blur
+		  // Documewnt/Window 이벤트  : load, resize, scroll, unload
+		  //클릭
+		 /*  $("p").click(function() {
+			$(this).hide();
+		}); */
+		
+		//더블클릭
+		  /* $("p").dblclick(function() {
+			alert("더블 클릭 성공")
+		}); */
+		
+		// mouseenter : mouseover
+		$("#p1").mouseenter(function() {
+			alert("mouseenter 성공");
+		});
+		
+		$("#p2").mouseover(function() {
+			alert("mouseover 성공");
+		});
+		
+		$("#p3").mouseleave(function() {
+			alert("mouseleave 성공");
+		});
+		
+		$("#p4").mouseout(function() {
+			alert("mouseout 성공");
+		});
+		
+		//hover() : mouseover/mouseout 두 방법 모두 실행
+		$("#p5").hover(function() {
+			alert("mouseover 기능");
+		}, function(){
+			alert("mouseout 기능");
+		});
+		
+		
+	});
+</script>
+
+</head>
+<body>
+	<p id = "p5">If you click on me, I will disappear.</p>
+	<p><span id ="p1">Click me away!</span></p>
+	<p><span id="p3">Click me too!</span></p>
+	<hr>
+	<p>If you double-click on me, I will disappear.</p>
+	<p><span  id = "p2">Click me away!</span></p>
+	<p><span id= "p4">mouseout me too!</span></p>
+</body>
+</html>

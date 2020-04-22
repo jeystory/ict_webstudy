@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event</title>
+<script type="text/javascript">
+	function setRed(){
+		document.getElementById("box1").style.background = "red";
+		document.getElementById("box1").style.color = "black";
+	}
+	function setGreen(){
+		document.getElementById("box1").style.background = "Green";
+		document.getElementById("box1").style.color = "red";
+	}
+	function setBlue(){
+		document.getElementById("box1").style.background = "Blue";
+		document.getElementById("box1").style.color = "white";
+	}
+</script>
+</head>
+<body>
+	<div style="margin:auto; width:200px;">
+		<button onclick = "setRed()"> Red</button>
+		<button onclick = "setGreen()"> Green</button>
+		<button onclick = "setBlue()"> Blue</button>
+	</div>
+	<div id="box1" style="border: 1px solid black; width: 200px; 
+    	 height:200px; text-align: center; margin: auto;
+	 	background: #ffffff;">
+     	BOX1
+	</div>
+</body>
+</html>

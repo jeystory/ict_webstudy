@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery-Ancestors</title>
+<style type="text/css">
+.ancestors * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+      // parent() : 선택한 요소의 직접 상위 요소를 선택
+      // parents() : 선택한 요소의 모든 상위 요소를 선택
+      // parents(filter);
+      // parentsUntil(filter);
+      $("span").parent().css({"color":"red","border" :"2px solid red"});
+      $("ul").parents().css({"color":"blue","border" :"2px solid blue"});
+      // span를 가지고 있는 ul를 선택
+      $("span").parents("ul").css("color","white");
+ 	  // span 과 div 사이     
+      $("span").parentsUntil("div").css("background","#999999");
+   });
+</script>
+</head>
+<body>
+<div class="ancestors">
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)  
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+
+  <div style="width:500px;">div (grandparent)   
+    <p>p (direct parent)
+      <span>span</span>
+    </p> 
+  </div>
+</div>
+</body>
+</html>

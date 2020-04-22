@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table background color</title>
+<style type="text/css">
+	table{margin: auto; width: 60%; height:200px; background-color: skyblue}
+	table,th,td{ border: 1px solid black;}
+	td{text-align:center;}
+</style>
+</head>
+<body>
+	<table>
+		<caption> 방종류 1 </caption>
+		<thead style="background-color: grey">
+		<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+		</thead>
+		<tbody style="background-color: red">
+			<tr><td>유채방</td><td>여성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>동성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>가족</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>천혜향방</td><td>누구나</td><td>2인실</td><td>1인 20,000원</td></tr>
+		</tbody>
+	</table>
+	<br>
+	<table>
+		<caption> 방종류 2</caption>
+		<thead>
+		<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+		</thead>
+		<tbody>
+			<tr style ="background-color:lime"><td>유채방</td><td>여성</td><td rowspan="3">4인실</td><td rowspan="4">1인 20,000원</td></tr>
+			<tr style ="background-color: orange"><td rowspan="2">동백방</td><td>동성</td></tr>
+			<tr><td>가족</td></tr>
+			<tr><td>천혜향방</td><td>누구나</td><td>2인실</td></tr>
+		</tbody>
+	</table>
+	<br>
+	<!--  배경색을 열 위주로 : col, colgroup : 순서대로 배치 --> 
+	<table>
+		<caption> 방종류 3</caption>
+		<!-- <col style="background-color: silver"> -->
+		<col><!-- 베경색 그대로, 아무런 변화없이 첫번째 컬럼을 건너뛰고 다음 컬럼부터 색을 지정하고 싶을 떄 -->
+		<!--  
+		<col style="background-color: yellow">
+		<col style="background-color: yellow">
+		-->
+		<colgroup span ="2" style="background-color: yellow">
+		
+	
+		<thead>
+		<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>유채방</td><td>여성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>동성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>가족</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>천혜향방</td><td>누구나</td><td>2인실</td><td>1인 20,000원</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>

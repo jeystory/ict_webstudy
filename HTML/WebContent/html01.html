@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html tag와 elements</title>
+</head>
+<body>
+	<!-- 
+	html(hyper text markup language) : 웹페이지의 내용
+		웹페이지의 표준 마크 업 언어
+		웹피이지를 만들 때 사용하는 언어
+		hyper text - 단순한 텍스트를 넘어서 웹페이지의 특정 부분과 연결할 수 있는 기능을 가진 텍스트, 즉 링크를 의미.
+		Markup Language : 정보를 구조적, 계층적으로 표현하는 언어. 
+		            계층적 : 부모, 자식, 형제의 구조 (트리 형태)
+	css : 웹페이지 모양과 표현
+	javascript : 기능과 동작
+	
+	** html의 구성 요소: 태크(tag) => html은 태그의 집합
+	태그 : <시작 태그>와 <끝태그> 중간에 있는 텍스트는 실제 화면에 나타나는 내용
+		빈 태그 = 빈 요소 : <끝태그>가 없는 태그도 존재. ex) <br>, <img>, <input>
+				내용이 없음. 속성을 이용해서 화면에 나타나거나, 화면에 표시되지 않더라도 다른 용도로 사용됨
+	요소 = elements
+	요소 : <시작태그> 텍스트 </끝태크>, 텍스트를 포함한 태크 전체는 요소
+	
+	웹브라우저에서 태그를 해석하고, 해석된 내용을 화면에 출력한다.
+	웹브라우저의 목적은 HTML 문서를 읽고 표시
+	브라우저는 HTML을 표시하지 않지만, 이를 사용하여 문서를 표시하는 방법을 결정
+	
+	<!DOCTYPE html>	: HTML5 문서정의
+	<html>			: root 요소
+		<head>
+					: 문서의 메타정보 포함(데이터에 대한 데이터, 목적을 가지고 만들어진 데이터)
+		</head>
+		<body>
+					: body 부분의 내용만 브라우저에 표시
+		</body>
+	</html>
+	
+	** 중첩된 HTML 요소 : 요소는 중첩 가능(요소안에 요소가 포함 가능)
+	<시작태그 1><시작 태그 2>내용 2</시작태그2> 내용 1  <시작 태그 3>내용 3</시작태그3> </끝태그 1> 
+	=> 바깥태그는 부모태그, 안에 존재하는 태그는 자식 태그
+	[올바른 중첩]
+	<h1> hello ,<i> HTML</i></h1>
+	<h1> <i> HTML</i> /Hello </h1>
+	<h1> <i> HTML</i></h1>
+	[잘못된 중첩]
+	<h1> Hello, <i> HTML</h1></i>
+	 -->
+	<!--올바르지 못한 표현 -->
+	<p>This is a paragraph.
+	<p>This is a paragraph.
+	<p>This is a <br> paragraph with a line break.</p>
+	
+	
+</body>
+</html>

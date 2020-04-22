@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>condition-if</title>
+<script type="text/javascript">
+	// java의 if와 같은 구조
+	// k1이 홀수 인지 짝수인지 판별
+	document.write( "<h2>");
+	var k1 = 4;
+	var res = "홀수";
+	if(k1%2 == 0){
+		res ="짝수";
+	}
+	document.write(k1 + "는 " + res);
+	document.write( "<br>");
+	// k1이 1또는 3이면 남자 아니면 여자
+	k1 = 3;
+	if(k1 == 1 || k1 == 3){
+		document.write(k1 + "는 남자");
+	} else {
+		document.write(k1 + "는 여자");
+	}
+	document.write( "<br>");
+	// 근무 시간이 8시간까지 8350원, 8시간 초과하면 1.5배 지급
+	// prompt dialog 로 입력 시간 받기
+	k1 = prompt("근로 시간 입력 : ");
+	
+	var pay = 8350;
+	var wage = 0;
+	if(k1 > 8){
+		wage = ((k1-8) * (pay*1.5)) +  (8 * pay);
+	}else{
+		wage = k1 * pay;
+	}
+	document.write(k1 + "의 월급은 " + wage);
+	
+	// 연봉인상 < 100 ->  회사 그만고 이직 준비
+	// 연봉인상 == 200 -> 3개월 다니고 닭집 차리기
+	//            ==  500 ->그냥 다니기
+	//              <     1000  => 회사에 충성
+	// prompt로 연봉 인상 받기
+	
+	wage = prompt("연봉 인상은 얼마인가요?");
+	res ="";
+	if(wage < 100){
+		res = "회사 그만고 이직 준비";
+	} else if(wage <= 200){
+		res = "3개월 다니고 닭집 차리기";
+	} else if(wage <=500){
+		res = "그냥 다니기";
+	} else if (wage < 1000){
+		res = "회사   다니기";
+	}else {
+		res = "회사 열심히  다니기";
+	}
+	document.write( "결과는 " + res);
+	document.write( "<br>");
+	
+	document.write( "</h2>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

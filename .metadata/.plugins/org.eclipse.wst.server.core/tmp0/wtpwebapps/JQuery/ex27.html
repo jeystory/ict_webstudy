@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지사항</title>
+<style type="text/css">
+	#content{
+		width: 1200px;
+		height: 600px;
+		background-color: skyblue;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	img{width: 200px;height: 250px;}
+	#movie{
+		width: 200px;
+		height: 300px;
+		position: absolute;
+		display: show;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+     $("#show").click(function() {
+		 $("#movie").css("display","block");
+	  });
+     $("#close").click(function() {
+    	 $("#movie").css("display","none");
+ 	 });
+   });
+</script>
+</head>
+<body>
+	<div id="movie">
+		<div id="close">
+			<img alt="" src="images/image1.gif">
+		</div>
+	</div>
+	
+	<div id="content">
+		<h2> ICT 영화관 </h2>
+		<p>
+			ICT 영화관 오시는 길 <br>
+			2호선 홍대 입구 역
+		</p>
+		<p id="show"> 영화보기 </p>
+	</div>
+</body>
+</html>

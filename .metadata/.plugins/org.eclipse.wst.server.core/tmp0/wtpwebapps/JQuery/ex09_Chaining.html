@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Effects- Chaining</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+   		// chaining : 단일 명령문 내에서 동일한 요소에게 여러 jQuery 메소드를 실행할 수 있는 것
+   		// jQuery로 스타일 지정
+   		$("button").click(function() {
+   			$("#p1").css("color", "red").slideUp(2000).slideDown(2000) ;   
+		});
+   				
+   });
+</script>
+</head>
+<body>
+	<p id="p1">jQuery is fun!!</p>
+	<button>Click me</button>
+</body>
+</html>

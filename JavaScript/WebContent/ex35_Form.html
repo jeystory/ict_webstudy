@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myFunction() {
+		var text;
+		var x = document.getElementById("numb").value;
+		if(isNaN(x) || x < 1 || x > 10){
+			text = "Input not valid";
+		}else{
+			 text = "Input OK";
+		}
+		document.getElementById("demo").innerHTML = text;
+	}
+	function send_go(f) {
+		var age = f.age.value ;
+		if(isNaN(age) || age < 1 || age > 10){
+			alert("나이는 정확하게 입력하세요");
+			return;
+		}
+		f.action="";
+		f.submit();
+	}
+	function myFunction2() {
+		var numb2 = document.getElementById("numb2");
+		if(! numb2.checkValidity()){
+			document.getElementById("demo2").innerHTML = "제대로 입력하세요";
+		}else{
+			document.getElementById("demo2").innerHTML = "정확하게 입력하셨습니다.";
+		}
+	}
+	/* checkValidity() => 유효한 데이터이면 true */
+	function send_go2(f) {
+		var k = f.age; 
+		if(! k.checkValidity()){
+			alert("재대로 입력하세요");
+		}
+		f.action="";
+		f.submit();
+	}
+</script>
+</head>
+<body>
+	<p>Please input a number between 1 and 10:</p>
+	<input id="numb">
+	<button type="button" onclick="myFunction()">Submit</button>
+	<p id="demo"></p>
+	<hr>
+	<p>Please input a number between 1 and 10:</p>
+	<form>
+		age : <input type="text" name="age">
+		<input type="button" value="보내기" onclick="send_go(this.form)"> 
+	</form>
+	<hr>
+	<p>Please input a number between 1 and 10:</p>
+	<input id="numb2" type="number" min="1" max="10">
+	<button type="button" onclick="myFunction2()">Submit</button>
+	<p id="demo2"></p>
+	<hr>
+	<p>Please input a number between 1 and 10:</p>
+	<form>
+		age2 : <input id="numb3" type="number" name="age" min="1" max="10">
+		<input type="button" value="보내기" onclick="send_go2(this.form)"> 
+	</form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>block and inline 요소</title>
+</head>
+<body>
+	<!-- 
+	html에 display는 두가지 존재 : block 과 inline
+	 block : 항상 새로운 줄에서 시작하여 전체 넓이를 차지한다.
+	 block 요소 :  <div><p><form><fieldset><table><tfoot> <h1>-<h6><hr><pre>
+                 <dd><dl><dt><ol><ul><li>
+                 <header><nav><section><article><aside><address><footer>
+                 <figcaption><figure>
+                 <main><noscript><video><blockquote><canvas>
+	 
+	 inline : 새로운 줄에서 시작하지 않으며 , 필요한 만큼만 넓이를 차지한다.
+	 inline 요소 : <span> <a>  <br> <img> <input><label><select><textarea><button>
+                <map> <script> <big><small><strong><sub><sup><b> <em> <i>
+                <abbr><acronym><bdo><cite><object><output><q><samp>
+                <code><dfn><kbd><time><tt><var>
+	 -->
+	
+	 <div style="border: 1px solid green">Hello World</div>
+	 <span style="border: 1px solid blue"> hello world</span>
+	 
+	 <!-- div: 다른 요소를 포함하는 컨테이터 역활. 또는 영역을 나누는 역활 -->
+	 <div style="background-color:black;color:white;padding:20px;">
+	 <h2>London</h2>
+	 <p>London is the capital city of England. 
+	     It is the most populous city in the United Kingdom,
+	     with a metropolitan area of over 13 million inhabitants.</p>
+ 	 </div>
+ 	 
+ 	 <!--  인라인 요소는 블록레벨 요소안에 들어가서 사용되는 경우가 많음. 혼자 사용 가능-->
+ 	 <!-- span : style, class, id 속성 정도 사용 -->
+ 	 <h1>My <span style="color:red">Important</span> Heading</h1>
+</body>
+</html>

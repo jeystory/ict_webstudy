@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Effects - Animate</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<style type="text/css">
+	div{
+		background-color:#98bf21;
+		width: 100px;
+		height: 100px;
+		 position: absolute; 
+		/* position: relative; */
+	}
+</style>
+<script type="text/javascript">
+   $(function(){
+	  /* 
+	  $(selector).animate({params},speed,callback); 
+	  {params} 는 보통 애니메이션 처리될 CSS 특성을 정의
+		div의 position은 보통 fixed나 absolute, relative를 이용(static은 사용불가)	
+	  */
+	  /*
+   		$("#btn1").click(function() {
+   			// 250 px의 왼쪽 속성에 도달할 때까지 <div>요소를 오른쪽으로 이동
+			$("#div1").animate({left:'250px'}, "5000");
+		});
+	  */
+	  
+	  // 여러가지 동시에 애니메이션 적용하기
+	 /*  $("#btn1").click(function() {
+			$("#div1").animate({
+				left:'250px',
+				opacity:'0.35',
+				width:'200px',
+				height:'200px'},3000);
+	 }); */
+	  
+	// 여러번 호출 가능
+		/* 
+		("#btn1").click(function() {
+		 	var div = $("#div1");
+	 		div.animate({height:"300px", opacity:"0.4"},"slow");
+			div.animate({width:'300px', opacity:'0.4'},"slow");
+			div.animate({height:'100px', opacity:'0.8'},"slow");
+			div.animate({width:'100px', opacity:'0.8'},"slow");
+	 	});
+	   */
+	 
+	  /*  $("#btn1").click(function() {
+			 $("#div1").animate({
+				 width:'300px',
+				 height:'300px'},
+				 "slow", 
+				 function() {
+				  	//$(this).append("<p> Animation is complete ! </p>"); 	
+					 //  position: relative; 
+				  	$(this).after("<p> Animation is complete ! </p>");
+				});
+		 }); */
+	   	$("#btn1").click(function() {
+			 var s = $("span");
+			 $("#div1").animate({
+				 left:'400px',
+				 width:'400px',
+				 opacity:'0.8',
+			 },3000, function() {
+				 s.animate({fontSize:'3em'},"slow");
+			});
+			
+		});
+		 
+   });
+</script>
+</head>
+<body>
+<button id = "btn1">Start Animate</button>
+<hr>
+<div id="div1"><span>jQuery</span></div>
+</body>
+</html>

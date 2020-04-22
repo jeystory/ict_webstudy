@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Effects - Slide</title>
+<style type="text/css">
+	 #panel{
+		padding : 5px;
+		text-align: center;
+		background-color: #e5eecc;
+		border : 1px solid #c3c3c3;
+	}
+	#panel{
+		padding: 50px;
+		display: none;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+		// $(selector).slideDown(speed,callback);
+       // slideDown() : 아래로 슬라이딩하면서 보이기 
+       // slideUp     : 위로 슬라이딩하면서 숨기기
+       // slideToggle() : slideDown()/slideUp  
+       	$("#btn1").click(function() {
+			$("#panel").slideDown("slow");
+		});
+       
+       	$("#btn2").click(function() {
+  		 	 $("#panel").slideUp("slow");
+  	   	});
+       	
+        $("#btn3").click(function() {
+  		  	$("#panel").slideToggle("slow");
+  	   	});
+   });
+</script>
+ 
+</head>
+<body>
+	<button  id ="btn1">Slide Down</button>
+	<button  id ="btn2">Slide Up</button>
+	<button  id ="btn3">Slide Toggle</button>
+	<hr>
+	<div id ="panel">Hello World!</div>
+</body>
+</html>

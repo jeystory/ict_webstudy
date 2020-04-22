@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택자2</title>
+<style>
+	p{
+		color:white;
+	}
+	div p {
+  		background-color: skyblue;
+	}
+	
+	div>p {
+  		background-color: green;
+	}
+	
+	div>section>p{
+	 	background-color: tomato;
+	 }
+	 
+	 body>p{
+	 	background-color: gray;
+	 }
+	 
+	 div+p{background-color: olive; }
+	 
+	 div ~ p{color: blue; }
+	section ~ p{color: black; }
+	
+</style>
+</head>
+<body>
+	<!--  *  : 모두, 태그 :요소, .(점) : 클래스, # : id
+			공백 : 자손, > : 바로 밑에 속한 자식, 
+			+ : 인접한 형제, ~ : 일반 형제
+			 	- Sibling 의 뜻은 부모 같은 태그인 형제 태그
+        		- '인접한(next) '의  바로 옆에 붙어 있는 형제 태그 
+        		- '일반' 은 모든 형제 태그를 의미
+	-->
+	<div>
+		<p>Paragraph 1 in the div.</p>
+		<p>Paragraph 2 in the div.</p>
+		<section>
+			<p>Paragraph 3 in the div.</p>
+		</section>
+		<p>Paragraph 2 in the div.</p>
+	</div>
+
+	<p>Paragraph 4. Not in a div.</p>
+	<p>Paragraph 5. Not in a div.</p>
+</body>
+</html>

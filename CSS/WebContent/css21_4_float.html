@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Float 로 수평 메뉴 만들기</title>
+<style>
+	ul {
+  		list-style-type: none;
+  		padding:0px;
+  		overflow: hidden;
+  		background-color: #333;
+	}
+
+	li {
+  		float: left;	/* 메뉴를 수평으로 배치 */
+	}
+
+	li a {
+		/* inline이지만, 내부에서는 block 처럼 표시함*/
+  		display: inline-block;
+  		color: white;
+  		text-align: center;
+  		padding: 14px 16px;
+  		text-decoration: none;
+	}
+
+	li a:hover {
+  		background-color: #888;
+	}
+
+	.active {
+  		background-color:grey;
+	}
+</style>
+</head>
+<body>
+	<ul>
+  		<li><a href="#" class="active">Home</a></li>
+  		<li><a href="#">News</a></li>
+  		<li><a href="#">Contact</a></li>
+  		<li><a href="#">About</a></li>
+	</ul>
+</body>
+</html>

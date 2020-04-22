@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - Dimensions</title>
+<style type="text/css">
+	#div1{
+	   width: 300px;
+	   height: 200px;
+	   padding: 10px;
+	   margin: 3px;
+	   border: 1px solid blue;
+	   background-color: lightblue;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+      // width()  : 넓이 구하는 메소드 
+      // height() : 높이 구하는 메소드
+      // InnerWidth  : width() + padding
+      // InnerHeight : height()+ padding
+      // outerWidht  : width() + padding + border
+      // outerHeight : height() + padding + border
+      // outerWidht(true)  : width() + padding + border + margin
+      // outerHeight(true) : height() + padding + border + margin
+      $("#btn1").click(function() {
+		 var txt = "";
+		 txt += "Width of div : " + $("#div1").width()+"<br>";
+		 txt += "Height of div : " + $("#div1").height()+"<br>";
+		 txt += "InnerWidth of div : " + $("#div1").innerWidth()+"<br>";
+		 txt += "InnerHeight of div : " + $("#div1").innerHeight()+"<br>";
+		 txt += "outerWidth of div : " + $("#div1").outerWidth()+"<br>";
+		 txt += "outerHeight of div : " + $("#div1").outerHeight()+"<br>";
+		 txt += "outerWidth(true) of div : " + $("#div1").outerWidth(true)+"<br>";
+		 txt += "outerHeight(true) of div : " + $("#div1").outerHeight(true)+"<br>";
+		 $("#div1").html(txt);
+	  });
+      $("#btn2").click(function() {
+    	  $("#div1").width(500).height(500);
+      });
+   });
+</script>
+</head>
+<body>
+
+<div id="div1"></div>
+<br>
+<button id="btn1">Display dimensions of div</button>
+<button id="btn2">div Resize </button>
+<p>width() - returns the width of an element.</p>
+<p>height() - returns the height of an element.</p>
+</body>
+</html>
+
+
+
+
+
+
+

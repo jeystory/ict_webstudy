@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Syntax</title>
+<!-- 1. Start jQuery  -->
+<script type="text/javascript" src = "js/jquery-3.4.1.min.js"></script>
+<!-- 2. jQuery Ready Event -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		<!-- 
+		$(selector).action()
+		
+		selector :
+		1. this => 현재 실행중인 요소
+		2. element  -> 태그
+		3. #  => 아이디
+		4. . (점) => 클래스
+		5. :first =>  첫번째 요소
+		6. :first-child => 첫번째 자식 요소
+		7. :[속성]
+	 -->
+
+	});
+</script>
+</head>
+<body>
+<!-- 
+	$(selector).action()
+	
+	selector :
+	1. this => 현재 실행중인 요소
+	2. element  -> 태그
+	3. #  => 아이디
+	4. . (점) => 클래스
+	5. :first =>  첫번째 요소
+	6. :first-child => 첫번째 자식 요소
+	7. :[속성]
+ -->
+ <h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me to hide paragraphs</button>
+</body>
+</html>

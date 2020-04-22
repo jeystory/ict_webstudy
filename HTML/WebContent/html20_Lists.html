@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ol,ul,dl tag : List</title>
+</head>
+<body>
+	<!-- 
+		UL(unordered lists) 
+		ul tag 안에 항목은 li 태그 사용
+		style="list-style-type :disc(default), circle, square or none"
+		
+		ol(ordered lists)
+		ol 태그 안에 항목은 li 태그 사용
+     	style="list-style-type: 
+     	
+     	dl(description lists) - 설명, 정의  -> 사전이나 정의 문구에 사용
+     	dl태그 안에 dt(제목), dd(내용)
+	     
+	-->
+	<ul>
+  		<li>Coffee</li>
+  		<li>Tea</li>
+  		<li>Milk</li>
+	</ul>
+	
+	<hr>
+	<ul  style="list-style-type: circle;" >
+  		<li>Coffee</li>
+  		<li>Tea</li>
+  		<li>Milk</li>
+	</ul>
+	
+	<hr>
+	<ul style="list-style-type: square;">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ul>
+	
+	<hr>
+	<ul style="list-style-type: circle;">
+		<li>coffee
+			<ul>
+				<li>ice</li>
+				<li>hot
+					<ul>
+						<li>small size</li>
+						<li>large size
+							<ul>
+								<li>anything</li>
+								<li>anything</li>
+							</ul>
+						</li>
+					</ul>
+				</li>		  
+			</ul>
+		</li>	
+	</ul>
+	
+	<ol>
+  		<li>Coffee</li>
+  		<li>Tea</li>
+  		<li>Milk</li>
+	</ol>
+	<hr>
+	<ol start="3" style = "list-style-type: lower-roman;">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol>
+	<hr>
+	<ol style="list-style-type: lower-alpha;">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol>
+	<hr>
+	
+	<dl>
+  		<dt>Coffee</dt>
+ 		<dd>- black hot drink</dd>
+  		<dt>Milk</dt>
+  		<dd>- white cold drink</dd>
+	</dl>
+	
+	<dl>
+		<dt>키보드</dt>
+ 		<dd>표준 입력 장치</dd>
+  		<dt>모니터</dt>
+  		<dd>표준 출력 장치</dd>
+	</dl>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event</title>
+<style type="text/css">
+	.box{
+	border: 1px solid black;
+	width: 200px; height: 200px;
+	text-align: center;
+	margin: auto; 
+	background: #ffffff;
+	display:none;
+}
+</style>
+<script type="text/javascript">
+	function setRed(){
+		document.getElementById("b1").style.background = "red";
+		document.getElementById("b1").style.display = "block";
+		document.getElementById("b2").style.display = "none";
+		document.getElementById("b3").style.display = "none";
+	}
+	function setGreen(){
+		document.getElementById("b2").style.background = "Green";
+		document.getElementById("b1").style.display = "none";
+		document.getElementById("b2").style.display = "block";
+		document.getElementById("b3").style.display = "none";
+	}
+	function setBlue(){
+		document.getElementById("b3").style.background = "Blue";
+		document.getElementById("b1").style.display = "none";
+		document.getElementById("b2").style.display = "none";
+		document.getElementById("b3").style.display = "block";
+	}
+</script>
+</head>
+<body>
+	<div style="margin:auto; width:200px;">
+		<button onclick = "setRed()"> Red</button>
+		<button onclick = "setGreen()"> Green</button>
+		<button onclick = "setBlue()"> Blue</button>
+	</div>
+	<div class="box"  id="b1"> BOX1</div>
+	<div class="box" id="b2"> BOX2</div>
+	<div class="box" id="b3"> BOX3</div>
+	
+</body>
+</html>

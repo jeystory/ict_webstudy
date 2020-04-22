@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form </title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+     $("[type=text]").css("background","silver");
+     $("#btn").click(function() {
+	   	 var str = $("#id").val(); // getter
+	   	 $("#id2").val(str);       // setter
+  	 });
+     
+     $(":checkbox").change(function() {
+		  if($(this).is(":checked")){
+			 var msg = $("#id").val(); // getter
+			 $("#id2").val(msg);       // sette
+		  }else{
+			  $("#id2").val(""); 
+		  }
+	  });
+     $(":radio").change(function() {
+    	 if($(this).is(":checked")){
+			 var txt = $(":checked").val(); // getter
+			 $("#res").val(txt);       // sette
+		  }
+	  });
+     $("select").change(function() {
+    	  var str2 = $(":selected").val();
+    	  $("#res2").val(str2);
+	  });
+     $("#pwd2").keyup(function() {
+		 if($("#pwd").val() == $("#pwd2").val()){
+			 $("#myspan").html("<b>암호가 맞네요</b>");
+		 }else{
+			 $("#myspan").html("<b>암호가 틀리네요</b>");
+		 }
+	  });
+   });
+</script>
+</head>
+<body>
+	<p> 아이디 : <input type="text" name="id" id="id" /> </p>
+	<hr>
+	<p><input type="button" value="상동" id="btn" /></p>
+	<p><input type="checkbox" id="chk" value="1" />상동</p>
+	<hr>
+	<p> 아이디 : <input type="text" name="id2" id="id2" /> </p>
+	<hr>
+	<input type="radio" name="fruit" value="orange" id ="orange"> orange <br />
+	<input type="radio" name="fruit" value="apple" id ="apple"> apple <br />
+	<input type="radio" name="fruit" value="banana" id ="banana">banana <br />
+	<input type="text" name="res" id="res" />
+	<hr>
+	<select name="garden">
+		<option> :: 선택하세요 :: </option>
+		<option>Flowers</option>
+		<option>Shrubs</option>
+		<option>Trees</option>
+		<option>Bushes</option>
+		<option>Grass</option>
+	</select>
+	<input type="text" name="res2" id="res2" />
+	<hr>
+	<p>비번 :  <input type="password" id="pwd" name="pwd"></p>
+	<p>비번 확인: <input type="password" id="pwd2" name="pwd2"> 
+	           <span id="myspan">암호를 입력하세요</span>
+	</p>
+	
+</body>
+</html>

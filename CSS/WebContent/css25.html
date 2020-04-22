@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>pseudo class</title>
+<style>
+	div.box1 {
+  		background-color: green;
+  		color: white;
+  		padding: 25px;
+  		text-align: center;
+	}
+
+	div.box1:hover {
+  		background-color: olive;
+	}
+	
+	div.box2>p { 
+		display:none;
+		 background-color: yellow;
+  		padding: 20px;
+	}
+	
+	div.box2:hover>p{ display:block;}
+	
+	div.box3 p:first-child {
+		color: blue;
+		font-weight: bold;
+	}
+	
+	div.box3 p:last-child {
+		color: blue;
+		font-weight: bold;
+		
+	}
+	
+	p b:first-child {
+ 	 	color: purple;
+	} 
+	
+	 /* 부모의 세 번째 자식 인 모든 <p> 요소의 배경색을 지정하십시오. */
+  	p:nth-child(1) {
+		background: skyblue;
+  	}
+   	p:nth-child(3) {
+		background: skyblue;
+  	}
+   	p:nth-child(5) {
+		background: skyblue;
+  	}
+  	p:nth-last-child(1) {
+   	 	background: gray;
+  	}
+  	p:nth-last-child(3) {
+    	background: gray;
+  	}
+</style>
+</head>
+<body>
+<!-- 
+	selector:pseudo-class {
+  		property:value;
+	} 
+	ex) 	:hover => 마우스를 위로 올리면 
+			:first-child : 첫번째 자식 태그
+			:last-child : 마지막 자식 태그
+			:nth-child(숫자) => 부모의 숫자번째 자식 태그 
+-->
+	<p>Mouse over the div element below to change its background color:</p>
+	<div class=box1>Mouse Over Me</div>
+	<hr>
+	<div class=box2>Hover over me to show the p element
+  		<p>Tada! Here I am!</p>
+	</div>
+	
+	<hr>
+	<div class=box3>
+		<p >This is some text.</p>
+		<p>This is some text.</p>
+		<p>This is some text.</p>
+		<p>This is some text.</p>
+		<p>This is some text.</p>
+		<p>This is some text.</p>
+		<p><b>Note:</b> For :first-child to work in IE8 and earlier, a DOCTYPE must be declared.</p>
+	</div>
+</body>
+</html>

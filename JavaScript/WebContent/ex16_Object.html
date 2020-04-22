@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 : Object</title>
+<script type="text/javascript">
+	// 자바스크립트에서는 객체는 Object라고 하고 , properties(상태값)와 function(기능)
+	
+	//객체를 만드는 방법1
+	var person1 = new Object();
+	// 상태값
+	person1["name"] = "홍길동";
+	person1["age"]  = 14;
+	person1["addr"] = "서울";
+	person1["salary"] = 3600;
+	
+	// object 상태값 호출
+	 document.write("<h3>");
+	 document.write( person1["name"] +"<br>");
+	 document.write( person1["age"] +"<br>");
+	 document.write( person1.addr +"<br>");
+	 document.write( person1.salary +"<br>");
+	 document.write("</h3>");
+	 document.write("<hr>");
+	 // 방법2
+	 var person2 = {name:"임꺽정", age:24, addr:"충청도", salary:4800};
+	 document.write("<h3>");
+	 document.write( person2["name"] +"<br>");
+	 document.write( person2["age"] +"<br>");
+	 document.write( person2.addr +"<br>");
+	 document.write( person2.salary +"<br>");
+	 document.write("</h3>");
+	 document.write("<hr>");
+	 // 방법3
+	 var person3 = {
+		name : "장길산",		 
+		age : 36,
+		addr : "제주도",
+		salary : 5600,
+		prn : function(){
+			return "안녕하세요";
+		},
+		data:function(){
+			document.write(this.name+","+this.age+", " +this.salary);
+		}
+ 	}
+	 document.write("<h3>");
+	 document.write( person3["name"] +"<br>");
+	 document.write( person3["age"] +"<br>");
+	 document.write( person3.addr +"<br>");
+	 document.write( person3.salary +"<br>");
+	 document.write( person3.prn +"<br>");
+	 document.write( person3.prn() +"<br>");
+	 person3.data();  
+	 document.write("</h3>");
+	 document.write("<hr>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

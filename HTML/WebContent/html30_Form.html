@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form elements</title>
+</head>
+<body>
+<!--
+ 	form : 사용자의 정보를 받아서 다른 곳으로 보내는데 사용 
+ 	<form action=""; method="" ;enctype="">
+ 	action = " 데이터가 전달되는 페이지의 경로 표시"
+ 			보통은 자바스크립트를 이용해서 보낸다.
+ 	submit = 액션이 지정한 페이지로 데이터를 전달하는 목적의 버튼
+ 	method = 데이터를 전달하는 방식
+ 			**get|post, 생략하면 get 방식
+ 			-  get 방식 : 정보를 head에 담아서 전송. 정보가 눈에 보임. 속도 빠름, 적은 양에 적합, 보안에 취약
+ 			-  post 방식 : 정보를 body에 담아서 전송. 정보가 눈에 보이지 않음. get방식보다 느림. 많은 양에 정보처리에 적합
+ 	enctype => 업로드 할 때 사용
+ 	name => 폼에 이름 붙이기, 여러개의 폼일때 식별, 선택하는 목적으로 사용
+ 	
+ 	form 안에 들어가는 요소들 : input, label, select, textarea, datalist, button, fieldset, legend
+ 		input의 속성 :  text, button, radio, checkbox,  file,  hidden,  
+	                  number, password,  reset, submit,
+	                  tel, color, date, email, time, url, week   range,  search
+	    ** input type안에서 name 속성은 데이터가 전달될 때에 해당 이름으로 전달
+	    ** input type안에서 value값은 해당 이름의 값을 뜻함
+	    ** input type의 reset 속성은 정보를 초기화 해준다. 
+	    ** input type의 button 속성은 보통 onclick을 이용해서 보통 javascript  호출
+	         보통 onXXX는 자바스크립트 호출로 보면 된다. 
+		** disable : 커서가 해당 input type에 이동 불가능해서 데이터 입력 불가능 
+		** readonly : 오직 읽기만 가능. 변경 불가능.
+		    
+	    ** 같은 이름이 여러개인 경우 : 배열로 만들어서 처리해야 한다.
+	    ** radio button& checkbox :   checked 는  default로 선택이 되게 만들때 사용.
+	    ** select : selected 라고 속성이 지정되면 default로 선택되어 화면에 보여진다.
+	                     size 속성은 화면에 보이는 갯수를 의미.
+	                     multiple 속성은 ctrl이나 shift로 이용해서 여러개 선택가능
+		pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" : [0-9(숫자만)] {3(자릿수)}
+		               [A-Za-z]{3} : 영어 대소문자로 3글자 입력 가능.
+	   	required : 형식이 맞지 않을 때 경고 문구 표시.  비어 있을 때 submit을 할 경우도 경고 문구 표시
+	   	size : 입력 필드(input type)의 크기 지정(최대허용입력 길이가 아님(maxlength))
+	   	maxlength : 입력 필드에 허용하는 최대 글자수.
+	   	placeholder : 입력 필드에서 힌트 표시 
+	                     
+ -->
+ 	<form action="html30.html">
+ 		<fieldset>
+ 			<legned>사용자의 정보를 받아드리는 폼</legned>
+ 			
+ 			<!--  text : 한줄 글자 입력 -->
+ 			<p><label>아이디</label><input type="text"></p>
+ 			<p>비번<input type="password"></p>
+ 			<p>이름<input type="text" placeholder="이름입력"></p>
+ 			<p>나이<input type="number" placeholder="나이입력"></p>
+ 			<!--  최대허용 숫자 11자리. 형식이 맞지 않으면 경고-->
+ 			<p>전화번호<input type="tel" pattern="[0-9]{11}" required></p>
+ 			
+ 		
+ 			<!-- radio button : value 한개만 선택  -->
+ 			<p> 
+ 				성별: <input type="radio" name="gender" value="남"> 남자
+ 				 <input type="radio" name="gender" value="여"> 여자
+ 			</p>
+ 			<!--  checkbox : 결과값이 아예 없거나 여러가지로 다양하게 들어올수 있어서 배열로 value값을 받아서 처리-->
+ 			<p>
+ 				 취미:<input type="checkbox" name="hoddy" value="운동"> 운동
+ 				<input type="checkbox" name="hoddy" value="영화"> 영화
+ 				<input type="checkbox" name="hoddy" value="수면"> 수면
+ 			</p>
+ 			<!--  파일 업로드 할때 -->
+ 			<p>파일 : <input type="file"> </p>
+     		<p>컬러 : <input type="color"> </p>
+     		<p>날짜 : <input type="date"> </p>
+     		<p>시간 : <input type="time"> </p>
+     		<p>날짜시간 : <input type="datetime"> </p>
+     		<p>범위 : <input type="range"> </p>
+ 			
+ 			<!-- 화면에는 안보이고 이름과 값은 전송 -->
+ 			<input type="hidden " name="page" value="108"><br>
+ 			
+ 			<!-- 여러줄의 정보를 받는 경우 -->
+ 			<p>자기소개서</p>
+ 			<textarea rows="3"cols="25"> 자기소개서 </textarea><br>
+ 		
+ 			<!--드롭다운 목록 -->
+ 			<p>거주지 : <select name="addr">
+ 							<option>::선택하세요::</option>
+ 							<option  value="seoul">서울</option>
+ 							<option  value="jeju">제주</option>
+ 							<option  value="abroad">해외</option>
+ 						</select></p>
+ 			<!--  multiple : 여러개 선택 가능
+ 					multiple ="multiple" 인 경우 value 삭제 가능 -->			
+ 			<p>좋아하는 운동 : <select name="sports" multiple size="5">	
+ 							<option value="soccer">축구</option>
+ 							<option  value="volleyball">배구</option>
+ 							<option  value="baseball">야구</option>
+ 							<option  value="volling">볼링</option>
+ 							<option  value="tabletennis">탁구</option>
+ 						</select></p>
+ 						
+ 			<p>
+ 				<!-- 먼저 input 요소에 list 이름 지정  -->
+ 				<input list="browsers">
+ 				<datalist id ="browsers">
+ 					<option value="익스플로러"></option>
+					<option value="크롬"></option>
+					<option value="파이어폭스"></option>
+					<option value="오페라"></option>
+				<option value="사파리"></option>
+ 				</datalist>
+ 			</p>
+ 			
+ 			<!-- submit : 받은 정보를 action 속성이 지정한 페이지로 정보를 전송 -->
+ 			<input type="submit"><br>
+ 			<input type="submit" value="보내기1"><br>
+ 			<input type="button" value="보내기2" onclick="자바스크립트 함수 호출"><br>
+ 			<button type="submit"> 보내기 3</button>
+ 		</filedset>
+ 		
+ 	</form>
+</body>
+</html>

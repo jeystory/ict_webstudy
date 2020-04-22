@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - Siblings</title>
+<style>
+.siblings * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+		// siblings() : 모든 형제 요소 반환  
+		// next() : the next sibling element of the selected element.
+		// prev() : the previous sibling element of the selected element.
+		// nextAll() : all next sibling elements of the selected element.
+		// prevAll() : all previous sibling elements of the selected element.
+		// nextUntil("element" ) : all next sibling elements of the selected element.
+		//prevUntil("element" ) : all previous sibling elements of the selected element.
+	   	$("h2").siblings().css({"color": "red", "border": "2px solid red"});
+	   	$("h2").siblings("p").css({"color": "blue", "border": "2px solid blue"});
+	   	$("h2").next().css({"background": "skyblue"});
+		$("h2").prev().css({"background":"tomato"});
+	    $("h2").nextAll().css({"background": "skyblue"});
+	    $("h2").prevAll().css({"background":"tomato"});
+	    $("span").nextUntil("h3").css({"background": "olive"});
+	    $("h3").prevUntil("span").css({"background": "red"});
+   });
+</script>
+
+</head>
+<body class="siblings">
+
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+
+</body>
+</html>

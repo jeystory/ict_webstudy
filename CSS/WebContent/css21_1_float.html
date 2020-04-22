@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>float and clear</title>
+<style type="text/css">
+	div {
+  		border: 3px solid #4CAF50;
+  		padding: 5px;
+	}
+
+	.img1 {
+  		float: right;
+	}
+
+	/* 예전 방법
+	.clearfix {
+  		overflow: auto;
+	}
+	*/
+	
+	.clearfix::after {
+  		content: "";
+  		clear: both;
+  		display: table;
+	}
+	
+	.img2 {
+ 		 float: right;
+	}
+
+</style>
+
+</style>
+</head>
+<body>
+<!-- 
+	float : 화면 좌우에 특정 요소의 위치를 지정할 때 사용
+		left - 특정 요소를 컨테이너에 왼쪽에 위치.
+		right - 특정 요소를 컨테이너에 오른쪽에 위치.
+		none -default,  요소의 위치가 지정되지 않음 (단순히 요소가 코드에 위치한 부분에 위치됨 ). 
+		inherit - The element inherits the float value of its parent
+		
+		**요소가 그 요소를 포함한 요소보다 키가 큰 경우, 그 포함된 요소는 포함한 요소의 경계를 	벗어나게 됨. 
+		즉, 안쪽 요소는 바깥쪽 요소(안쪽 요소를 포함한 컨테이너 요소)의 바깥쪽으로 나가게 됨. 
+		이 예제에서는 컨터이네 div 영역을 그림이 오버플로우 되게 된다. 
+		-> 이문제를 해결하게 위해서 overflow:auto를 써서 안쪽 요소를 바깥 요소의 경계안으로 들어오게 하여 오버플로우 되는 
+		문제를 해결할 수 있다.
+		-> 요즘에는 ::after를 써서 이 문제를 해결하는 것이 권장사항
+			.clearfix::after {
+  				content: "";
+  				clear: both;
+  				display: table;
+			}
+		
+		
+
+ -->
+ 
+ 	<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+	<div>
+  		<img class="img1" src="images/pineapple.jpg" alt="Pineapple" width="170" height="170">
+  		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+	</div>
+
+	<p style="clear:right;">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+	<div class="clearfix">
+  		<img class="img2" src="images/pineapple.jpg" alt="Pineapple" width="170" height="170">
+  		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - Content 및 Attributes 가져오기 </title>
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+	  // text() - 선택된 요소의 텍스트 내용을 설정하거나 반환 
+	  // html() - 선택된 요소의 내용을  설정 하거나 반환
+	  // val() - form양식의 값(value의 약자) 
+	  // attr() - 속성
+	  $("#btn1").click(function() {
+		   $("#test1").text("<h2>Hello World !!</h2>");
+	   });
+	  $("#btn2").click(function() {
+		    $("#test2").html("<h2>Hello World !!</h2>");
+	   });
+	  $("#btn3").click(function() {
+		    $("#pw").val("Hong Gil Dong");
+	   });
+	  $("#btn4").click(function() {
+		    $("#w3s").attr("href","http://www.naver.com");
+	   });
+   });
+</script>
+</head>
+<body>
+
+<p id="test1">This is some <b>bold</b> text in a paragraph.</p>
+<p id="test2">This is some <b>bold</b> text in a paragraph.</p>
+<p><input type="text" id="pw" placeholder="비번 입력"></p>
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+<button id="btn1">Show Text </button>
+<button id="btn2">Show HTML</button>
+<button id="btn3">Show Value</button>
+<button id="btn4">Show attribute</button>
+</body>
+</html>

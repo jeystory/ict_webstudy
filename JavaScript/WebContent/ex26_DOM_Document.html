@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM(Document Object Model) Document </title>
+</head>
+<body>
+	<p id="demo1">Hello World</p>
+	<p><span id ="demo2">Welcome KOREA</span></p>
+	<p id="res1">서울시 마포구 서교동</p>
+		<p id="res2"></p>
+	<hr>
+	
+
+
+<script type="text/javascript">
+ 	// html 요소 변경하기
+ 	// 1. element.innetHTML : 내용
+ 	// 2. element.attribute : 속성
+ 	// 3. element.style.property : CSS 속성
+
+ 	document.getElementById("res1").innerHTML ="KOREA SEOUL" ;
+ 	document.getElementById("res2").innerHTML ="<h2>KOREA SEOUL</h2>" ;
+ 	document.getElementById("demo1").align = "center" ;
+ 	document.getElementById("demo2").style.color = "skyblue" ;
+	document.getElementById("demo2").style.background = "tomato" ;
+
+</script>
+</body>
+</html>

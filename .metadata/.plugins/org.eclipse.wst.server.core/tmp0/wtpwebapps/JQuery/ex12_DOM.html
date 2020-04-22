@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - Content 및 Attributes 가져오기 </title>
+<style type="text/css"></style>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+   $(function(){
+		// each : 반복문 (for문)
+		// each(function(index, element){ 내용 })
+		$("p").each(function(index) {
+			$(this).attr({"id":"para-"+index});
+		});
+   
+       $("#btn1").click(function() {
+		    alert($("#para-1").text());  // 글자만 추출
+		    alert($("#para-1").html());  // 글자와 태그 추출
+	    });
+       
+       $("#btn2").click(function() {
+		  	$("#para-3").text("<b>Hello</b>");  // 글자만 추출
+		  	$("#para-4").html("<b>Hello</b>");  // 글자와 태그 추출
+	    });
+   });
+</script>
+</head>
+<body>
+	<p>이것은 하나의 단락이다.</p>
+	<p><b>첫번째</b></p>
+	<p>두번째</p>
+	<p>세번째</p>
+	<p>네번째</p>
+	<p>다섯번째</p>
+	<button id="btn1">동작1</button>
+	<button id="btn2">동작2</button>	
+	<hr>
+</body>
+</html>

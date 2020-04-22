@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html5 Canvas</title>
+</head>
+<body>
+	<img id="myimg",  alt="" src="img/pic_bulbon.gif">
+	<br>
+	<!-- canvas 요소는 웹 페이지에 그래픽을 그리는데 사용 -->
+	<!-- 자바스크립트를 이용해서 선, 원,사각형, 그림, 글자를 표시 -->
+	<canvas id="mycanvas" width="800" height="600"  style = "border :1px solid grey"></canvas>
+	<script type="text/javascript">
+		/* id가 mycavas 인 요소를 c변수에 저장하라는 뜻*/
+		var c = document.getElementById("mycanvas");
+		
+		/*2d 그래픽 처리*/
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		
+		/* 좌표 0,0 이동 해라  (시작위치)*/
+		ctx.moveTo(0,0);
+		
+		/* 선 긋기 (끝위치)*/
+		ctx.lineTo(200,100);
+		ctx.stroke();
+		
+		/* 다시 시작 */
+		ctx.beginPath();
+		ctx.strokeStyle="#ff0000";
+		ctx.moveTo(0,100);
+		ctx.lineTo(200,0);
+		ctx.stroke();
+		
+		/* 사각형 strokeRect(시작위치x, y, width, height), fillRect */
+		ctx.beginPath();
+		ctx.strokeStyle="#ff00ff";
+		ctx.strokeRect(200,0, 100, 100);
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.fillStyle="green";
+		ctx.fillRect(300,0, 100, 100);
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.fillStyle="red";
+		ctx.fillRect(310, 10, 80, 80);
+		ctx.fill();
+		
+		/*원 :arc(x,y,반지름, 시작각도, 끝각도) : 각도 : math.PI *2(정원) , 1(반원) )*/
+		ctx.beginPath();
+		ctx.strokeStyle="#ff0000";
+		ctx.arc(450,50, 50, 0, Math.PI*2);
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.fillStyle="#0000ff";
+		ctx.arc(450,50, 40, 0, Math.PI*2);
+		ctx.fill();
+		
+		ctx.beginPath();
+		ctx.strokeStyle="#0aaa00";
+		ctx.arc(550,50, 50, 0, Math.PI*1);
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.strokeStyle="#0aaa00";
+		ctx.arc(650,50, 50,Math.PI*1, Math.PI*2);
+		ctx.stroke();
+		
+		// 글자 (text,시작위치=> 글자의 밑이 기준);
+		ctx.beginPath();
+		ctx.font ="100px Arial";
+		ctx.fillText("Hello World",0,200);
+		ctx.fill();
+		
+		ctx.beginPath();
+		ctx.font ="100px Arial";
+		ctx.strokeText("Hello World",0,310);
+		ctx.stroke();
+		
+		// 이미지 
+		ctx.beginPath();
+		var img = document.getElementById("myimg");
+		ctx.drawImage(img,0,320);
+	</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lists2</title>
+ <style>
+ 
+ ol{ 
+ 	background-color: #ff9999;
+ 	paddind : 20px
+ }
+ /* 자손, 하위 선택자 */
+ ol li{
+	  background-color: #ffe5e5;
+	  padding: 5px;
+}
+	
+ul{
+		background: #3399ff;
+		padding: 20px;
+}
+ul li{
+	   background: #cce5ff;
+	   margin: 5px;
+	   list-style-position: inside;
+}	
+
+ul.menu{
+		list-style-type: none; 
+	    margin: 0px;
+		padding: 0px; 
+	    overflow: hidden; 
+		background: #333333;
+}
+ul.menu li{
+	    background : #444444;
+		float:left; 
+		color: skyblue;
+}
+ul.menu a:hover{
+	    background: #aaaaaa;
+}
+ul.menu a{
+	    display: block;
+	    color: white;
+	    text-align: center;
+	    padding: 16px;
+	    text-decoration: none;
+}
+
+
+</style>
+</head>
+<body>
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ol>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<ul class="menu">
+  <li><a>Coffee</a></li>
+  <li><a>Tea</a></li>
+  <li><a>Coca Cola</a></li>
+</ul>
+</body>
+</html>

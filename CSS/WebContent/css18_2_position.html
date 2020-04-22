@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position property - relative</title>
+<style type="text/css">
+ div{
+ 	width : 200px;
+ 	height : 200px;
+ 	margin : 10px 5px;
+ 	padding : 5px;
+ 	border : 1px solid grey;
+ }
+ 
+ div#cont1{
+ 	position : relative;		/* 상대적, 다른 요소와 자연스럽게 어울릴수 있도록*/
+ 	background-color: lightyellow;
+ }
+ 
+  div#cont2{
+ 	position : relative;		
+ 	left : 20px;
+ 	top : -20px;
+ 	background-color: lightgreen;
+ }
+ 
+  div#cont3{
+ 	position : relative;		
+ 	background-color: skyblue;
+ }
+</style>
+</head>
+<body>
+<!--
+	** html 요소는 기본적으로 static 위치가 기본값이다.
+		top, bottom, left, right 속성의 영향을 받지 않는다.
+	position 속성은 요소에 사용되는 위치 결정 방법
+ 	static : 정적 - 다른 요소와 겹치지 않게 배치, 문서의 흐름의 거슬리지 않게
+	relative : 상대적 ( 다른 요소와 자연스럽게 어울리 수 있도록 ) 
+	fixed	: 고정   ( 절대 좌표 지정 : 화면을 벗어났을때 스크롤이  안보임  )
+	absolute :  부모태그가 존재하는 경우는 가장 가까이 배치된 부모의 위치가  배치 시작점이 된다.
+					단, 부모태그가 없는 경우는 fix처럼 절대좌표의 영향을 받음
+	sticky : 
+	
+	** top, bottom, left, right 속성을 사용해서 배치
+-->
+
+	<div id="cont1"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국</div>
+	<div id="cont2"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국</div>
+	<div id="cont3"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국</div>
+
+</body>
+</html>

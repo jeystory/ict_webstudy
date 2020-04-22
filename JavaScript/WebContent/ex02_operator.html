@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Operator</title>
+<script type="text/javascript">
+
+ 	// 산술연산자 : +, -, *, /, %
+ 	var su1 =7, su2 = 3;
+ 	document.write("<h2>");
+ 	document.write("<p> 산술연산자 </p>");
+ 	document.write(su1 + "+" + su2 +  "=" + (su1+su2) + "<br>")
+ 	document.write(su1 + "-" + su2 +  "=" + (su1-su2) + "<br>")
+ 	document.write(su1 + "*" + su2 +  "=" + (su1*su2) + "<br>")
+ 	document.write(su1 + "/" + su2 +  "=" + (su1/su2) + "<br>")
+ 	document.write(su1 + "%" + su2 +  "=" + (su1%su2) + "<br>")
+ 	document.write("<hr>")
+ 
+ 	// 관계연산자 : >,>=, <, <=, ==, != : 결과는 boolean 형, 조건식에 사용
+ 	document.write("<h2>");
+ 	document.write("<p> 관계연산자 </p>");
+ 	document.write(su1 + ">=" + su2 +  "=" + (su1>=su2) + "<br>")
+ 	document.write(su1 + "<=" + su2 +  "=" + (su1<=su2) + "<br>")
+ 	document.write(su1 + "==" + su2 +  "=" + (su1==su2) + "<br>")
+ 	document.write(su1 + "!=" + su2 +  "=" + (su1!=su2) + "<br>")
+ 	document.write("<hr>")
+ 	
+ 	document.write("<p> 관계연산자에서 주의사항 </p>");
+ 	su1 = 1000;
+ 	su2 = "1000";
+	document.write(su1 + "==" + su2 +  "=" + (su1==su2) + "<br>")
+ 	document.write(su1 + "!=" + su2 +  "=" + (su1!=su2) + "<br>")
+ 	
+ 	su1 = 1;
+ 	su2 =true;
+	document.write(su1 + "==" + su2 +  "=" + (su1==su2) + "<br>")
+ 	document.write(su1 + "!=" + su2 +  "=" + (su1!=su2) + "<br>")
+ 	
+	su1 = 0;
+ 	su2 =false;
+	document.write(su1 + "===" + su2 +  "=" + (su1===su2) + "<br>")
+ 	document.write(su1 + "!==" + su2 +  "=" + (su1!==su2) + "<br>")
+ 	
+	//관계 연산자 주의 사항 해결 방법 : === (일치연산자, 자료형과 값이 모두 일치할때만 true)
+	 su1 = 1000;
+ 	su2 = "1000";
+	document.write(su1 + "===" + su2 +  "=" + (su1===su2) + "<br>")
+ 	document.write(su1 + "!==" + su2 +  "=" + (su1!==su2) + "<br>")
+ 	
+ 	su1 = 1;
+ 	su2 =true;
+	document.write(su1 + "===" + su2 +  "=" + (su1===su2) + "<br>")
+ 	document.write(su1 + "!==" + su2 +  "=" + (su1!==su2) + "<br>")
+ 	
+	su1 = 0;
+ 	su2 =false;
+	document.write(su1 + "===" + su2 +  "=" + (su1===su2) + "<br>")
+ 	document.write(su1 + "!==" + su2 +  "=" + (su1!==su2) + "<br>")
+ 	document.write("<hr>")
+ 	// 논리연산자(&&, ||, !) : 결과값이 boolean 형은 조건식에 사용
+ 	su1 = true;
+ 	su2 = false;
+ 	document.write("<p> 논리연산자 </p>");
+ 	document.write(su1 + "&&" + su2 +  "=" + (su1&&su2) + "<br>")
+ 	document.write(su1 + "||" + su2 +  "=" + (su1||su2) + "<br>")
+ 	document.write("<hr>")
+
+ 	//증감연산자 : ++, --
+ 	su1 = 10;
+ 	su2 = 10;
+ 	document.write("<p> 증감연산자 </p>");
+ 	document.write("su1++  =" + (su1++) + "<br>")
+ 	document.write("++su2  =" + (++su2) + "<br>")
+ 	document.write("su1  =" + su1 + "<br>")
+ 	document.write("su2  =" + su2 + "<br>")
+ 	document.write("<hr>")
+ 	
+  	//대입연산자(=할당연산자) : +=, -=, *=, /=, %=
+  	su1 = 14;
+  	document.write("<p> 대입연산자 </p>");
+  	document.write("su1+=1  =" + (su1+=1) + "<br>")
+ 	document.write("su1-=1  =" + (su1-=1) + "<br>")
+ 	document.write("su1*=2  =" + (su1*=2) + "<br>")
+ 	document.write("su1/=2  =" + (su1/=2) + "<br>")
+ 	document.write("su1%=3  =" + (su1%=3) + "<br>")
+ 	document.write("<hr>")
+ 	
+ 	//삼항연산자(var 변수명 = 조건식?참:거짓;)
+ 	su1 = 79;
+  	var result = 0;
+ 	document.write("<p> 삼항연산자 </p>");
+ 	//su1이 80 이상이면 합격 아니면 불합격
+ 	result = (su1>80)? "합격":"불합격";
+ 	document.write("result  = " + result + "<br>")
+ 	//su1이 80 이상이면 합격 아니면 su1 점수의 10%뺀 점수 표시하기
+ 	result = (su1>80)? "합격":su1-(su1*0.1);
+ 	document.write("result  = " + result+ "<br>")
+  	
+ 	document.write("<hr>")
+	document.write("</h2>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

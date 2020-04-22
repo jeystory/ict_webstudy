@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>setInterval/clearInterval 자바스크립트</title>
+<script type="text/javascript">
+	var news = ["너무 늦은 '우한 봉쇄'…'우한 폐렴' 해외 확진자 6명 나와",
+		        "'우한 폐렴' 대처 논란 속 시진핑 엄밀한 예방·통제 조치해",
+		        "'우한 폐렴' 발원지 우한 긴급봉쇄…외부로 나가는 주민 통제",
+		        "'우한 폐렴' 사망자 17명으로 폭증…확진자 540명 넘어",
+		        "중남미 멕시코·브라질·콜롬비아서도 우한폐렴 의심환자"];
+	var timer;
+	var index = 0 ;
+	function start_news() {
+		// 2초마다 showNews 실행
+		timer = setInterval(showNews,2000);
+	}
+	function showNews() {
+		var div = document.getElementById("mydiv");
+		div.innerHTML = news[index++];
+		if(index == news.length) {index = 0 };
+	}
+    function stop_news() {
+		clearInterval(timer);
+	}
+
+</script>
+</head>
+<body>
+<div id="mydiv"></div>
+<button onclick="start_news()">뉴스보기</button>
+<button onclick="stop_news()">뉴스중지</button>
+</body>
+</html>

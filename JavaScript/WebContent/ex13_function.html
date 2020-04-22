@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+<script type="text/javascript">
+	/*함수 호출 : 1. 자바 스크립트안에서 함수명으로 호출
+	함수 호출 : 2. 태그 속성에서 onXX()을 이용해서 함수 호출
+					onClick = "자바스크립트함수()"
+	*/
+	
+	function test(su){
+		document.write("<h2> 함수 호출 연습" + su + "</h2>");
+	}
+	test(1);
+	
+</script>
+</head>
+<body>
+	<h2> 자바 스크립트 함수 호출 연습</h2>
+	<script type="text/javascript">
+		test(2);
+	</script>
+	<hr>
+	<hr>
+	<!-- 기존 내용이 사라지고 난 후 출력 -->
+	<button onClick="test(3)"> 함수 호출 </button><br>
+	<div style ="width:50px; border:1px solid black;" onmouseover="test(4);" >함수호출</div>
+</body>
+</html>

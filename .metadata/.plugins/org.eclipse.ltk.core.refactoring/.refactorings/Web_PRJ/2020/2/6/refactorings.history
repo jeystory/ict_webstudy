@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Move &apos;sw_layout.css&apos; to &apos;css&apos;" description="Move &apos;sw_layout.css&apos; to &apos;css&apos;" destination="WebContent/css" element1="WebContent/css_styles/sw_layout.css" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1580796021630" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Web_PRJ/WebContent/css/form_styles.css&apos; to &apos;sw_form.css&apos;" description="Rename resource &apos;form_styles.css&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/css/form_styles.css" name="sw_form.css" stamp="1580885675741" updateReferences="true"/>
+</session>

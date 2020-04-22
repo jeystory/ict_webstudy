@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Event Methods</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+	$(function() {
+		// 마우스 이벤트 : click, dblclick, mouseenter(=mouseover), mouseleave(= mouseout) 
+		  // 키보드 이벤트 : keypress, keydown, keyup              
+		  // form 이벤트 : submit, change, focus, blur
+		  // Documewnt/Window 이벤트  : load, resize, scroll, unload
+		  //클릭
+		  $("p").click(function() {
+			$(this).hide();
+		});
+		
+		//더블클릭
+		  $("p").dblclick(function() {
+			alert("더블 클릭 성공")
+		});
+		
+	});
+</script>
+
+</head>
+<body>
+	<p>If you click on me, I will disappear.</p>
+	<p>Click me away!</p>
+	<p>Click me too!</p>
+	<hr>
+	<p>If you double-click on me, I will disappear.</p>
+	<p>Click me away!</p>
+	<p>Click me too!</p>
+</body>
+</html>

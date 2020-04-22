@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Effects - Hide/Show</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script type="text/javascript">
+	$(function(){
+		$("#hide").click(function() {
+			$("p").hide();
+		});
+		
+		$("#show").click(function() {
+			$("p").show();
+		});
+	});
+</script>
+</head>
+<body>
+	<p><span id = "p1">If you click on the "Hide" button, I will disappear. 1</span></p>
+	<p><span id = "p2">If you click on the "Hide" button, I will disappear. 2</span></p>
+
+	<button id="hide">Hide</button>
+	<button id="show">Show</button>
+
+</body>
+</html>

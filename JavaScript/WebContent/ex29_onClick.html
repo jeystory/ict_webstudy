@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event : onClick</title>
+<script type="text/javascript">
+	function test1(){
+		document.getElementById("demo1").innerHTML = "id 사용";
+	}
+	function test2(){
+		document.getElementById("demo2").innerHTML = "none";
+	}
+	function test3(){
+		document.getElementById("demo3").style.fontSize = "45px";
+	}
+	function test4(){
+		var v = document.getElementById("fname").value;		//getter
+		document.getElementById("fname").value = v.toUpperCase();	//setter
+		
+	}
+</script>
+</head>
+<body>
+	<h2>id를 활용한 이벤트</h2>
+	<p id = "demo1">Click 1</p>
+	<p id = "demo2">Click 2</p>
+	<p id = "demo3">Click 3</p>
+	<p id = "demo4">Click 4</p>
+	<!-- onchange : enter를 입력해야 실행  -->
+	Enter your name : <input type = "text" id ="fname" onchange="test4()"> <br><br><br>
+	
+	<button onClick="test1()">Click</button>
+	<button onClick="test2()">Click</button>
+	<button onClick="test3()">Click</button>	
+	<button onClick="test4()">Click</button>
+	
+</body>
+</html>

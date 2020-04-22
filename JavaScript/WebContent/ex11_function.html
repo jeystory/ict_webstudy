@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+<script type="text/javascript">
+	
+	test1();
+	document.write("<br>");
+	function test1() {
+		document.write("Hi~~~~");
+	}
+	
+	function test1() {
+		document.write("Hello~~~~");
+	}
+	
+	test1();
+	document.write("<hr>");
+
+</script>
+<script type="text/javascript">
+	// test2();
+	var test2 = function() {
+		document.write("익명 Hi~~~~");
+	}
+	
+	var test2 = function() {
+		document.write("익명 Hello~~~~");
+	}
+	
+	test2();
+	document.write("<hr>");
+</script>
+
+<script type="text/javascript">
+	test3();
+	function test3() {
+		document.write("안녕~~~~<br>");
+	}
+	var test3 = function() {
+		document.write("방가~~~~<br>");
+	}
+	
+	test3();
+	document.write("<hr>");
+</script>
+
+<script type="text/javascript">
+	test4();
+	
+	var test4 = function() {
+		document.write("방가~~~~<br>");
+	}
+	function test4() {
+		document.write("안녕~~~~<br>");
+	}
+	test4();
+	document.write("<hr>");
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

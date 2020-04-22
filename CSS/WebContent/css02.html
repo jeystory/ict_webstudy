@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selectors</title>
+<style>
+p{
+	background-color:skyblue;
+}
+
+#para1 {
+  text-align: center;
+  color: white;
+  background-color: tomato
+}
+
+.cls1{
+	text-align: center;
+	background-color: lime;
+	 color: black;
+}
+
+p.center {
+   background-color: DodgerBlue;color: white; 
+}
+
+.center{text-align: center}
+
+* {
+ 	font-family:fantasy;
+  	color: blue;
+  	padding: 10px;
+}
+
+/* 선택기 이름이 다르지만 스타일이 같을 때 사용하는 방법*/
+h1, h2, p{
+  text-align: center;
+  color: red;
+}
+
+</style>
+</head>
+<body>
+<!-- 
+	selector 선택기=> 스타일을 적용할 html 문서의 특정 부분을 지정한다.
+	- 요소 선택기: 태그를 지정, 같은 종류의 태그는 모두 같은 스타일이 적용(해당 태그)
+	- id 선택기 : 웹 페이지내에서 특정 요소 하나만 선택해서 스타일을 적용(#id이름)
+	- class 선택기 : 웹페이지에서 특정요소나 또는 여러개를 선택해서 스타일을 지정. (.클래스이름)
+						다른 요소들끼리 같은 class명을 사용가능. 
+	- 전체 선택기 : 웹페이지 내 모든 요소를 선택해서 스타일 지정
+	- 같은 스타일이지만 선택기가 다른 경우 한번에 사용가능 : 선택기, 선택기, 선택기{}
+	
+  -->
+  	<p id="para1">Hello World!</p>
+	<p>This paragraph is not affected by the style.</p>
+	
+	<p class="cls1">Hello World!</p>
+	<p id="para2">This paragraph is not affected by the style.</p>
+	
+	<p class="cls1">Hello World!</p>
+	<p id="para3">This paragraph is not affected by the style.</p>
+	
+	<br>
+	<h1 class="center">This heading will  be center-aligned.</h1>
+	<p class="center">This paragraph will be red and center-aligned.</p>
+	
+	<h1>Hello World!</h1>
+	<h2>Smaller heading!</h2>
+	<p>This is a paragraph.</p>
+</body>
+</html>

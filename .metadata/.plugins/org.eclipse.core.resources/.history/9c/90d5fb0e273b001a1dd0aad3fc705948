@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Syntax</title>
+<!-- 1. jQuery 시작 -->
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- 2. jQuery ready event -->
+<!-- 3. JQuery 
+	   $("selector").action()
+	    selector : 
+	      1. this         => 현재 진행 실행 중 인 요소
+	      2. element      => 태그
+	      3. #            => 아이디
+	      4. .(점)         => 클래스 
+	      5. :first       => 첫번째 요소
+	      6. :first-child => 첫번째 자식요소
+	      7. :[속성]  
+	  -->
+<script type="text/javascript">
+/* 
+$(document).ready(function(){
+	  $("button").click(function() {
+		// hide() --> 이벤트
+		// 요소 선택자
+		// p 요소들을 숨긴다.
+		$("p").hide();
+	});    
+});
+ */
+//실행순서 : 1번 => head의 JavaScript
+//              2번 => body에 있는 본문
+//				 3번 => head에 있는 jQuery
+ $(function() {
+	// 기존 정보를 모두 삭제하고 출력된다.
+	//document.write("Hi");
+	
+	//alert("hi");
+	// 요소 선택자
+	//$("p").hide();
+	
+	// id 선택자
+	 $("#p1").hide();
+	
+	//클래스 선택자 .
+	 $(".p2").hide();
+});
+</script>
+<!-- <script type="text/javascript">
+	alert("kkkk");
+</script> -->
+</head>
+<body>
+	<!-- 
+		$(selector).action()
+		
+		selector :
+		1. this => 현재 실행중인 요소
+		2. element  -> 태그
+		3. #  => 아이디
+		4. . (점) => 클래스
+		5. :first =>  첫번째 요소
+		6. :first-child => 첫번째 자식 요소
+		7. :[속성]
+	 --> 
+ 	<h2>This is a heading</h2>
+	<p id = "p1">This is a paragraph.</p>
+	<p class = "p2">This is another paragraph.</p>
+	<p class = "p2">This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+	<button>Click me to hide paragraphs</button>
+</body>
+</html>

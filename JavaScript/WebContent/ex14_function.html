@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>매개변수를 function으로 사용</title>
+<script type="text/javascript">
+	function exec(func){
+		func();
+	}
+	
+	function hello(){
+		document.write("Hello" + "<br>");
+	}
+	
+	function hi(){
+		document.write("Hi" + "<br>");
+	}
+	
+	var time = 12;
+	if(time%2 == 0)	exec(hello);
+	else 						exec(hi);
+	
+	//리턴값으로 함수를 사용하는 경우
+	function createHello(){
+		function hello(user){
+			document.write(user + "님 방문을 환영합니다.")
+		}
+		 return hello;
+	}
+	
+	var result = createHello();
+	result("둘리");
+</script>
+</head>
+<body>
+
+</body>
+</html>

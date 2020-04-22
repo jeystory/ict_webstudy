@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position property - relative</title>
+<style type="text/css">
+ /*  2. 부모 태그가 존재하지 않는 경우  */
+ div{
+   top:520px;
+ 	width : 200px;
+ 	height : 200px;
+ 	margin : 10px 5px;
+ 	padding : 5px;
+ 	border : 1px solid grey;
+ }
+ 
+ div#cont1{
+ 	position : absolute ; 
+ 	background-color: lightyellow;
+ }
+ 
+  div#cont2{
+ 	position : absolute ; 
+ 	left : 20px;
+ 	top : 500px;
+ 	background-color: lightgreen;
+ }
+ 
+  div#cont3{
+ 	position : absolute ; 
+ 	left:800px;
+    top:520px;
+ 	background-color: skyblue;
+ }
+
+ 	div.relative {
+  		position: relative;
+  		top : 100px;
+  		width:400px;
+ 	 	height: 200px;
+  		border: 3px solid #73AD21;
+	} 
+
+	div.absolute {
+  		position: absolute;
+  		top: 80px;
+  		right: 0;
+  		width:200px;
+  		height: 100px;
+  		border: 3px solid #73AD21;
+}
+</style>
+</head>
+<body>
+<!--
+	** html 요소는 기본적으로 static 위치가 기본값이다.
+		top, bottom, left, right 속성의 영향을 받지 않는다.
+	position 속성은 요소에 사용되는 위치 결정 방법
+ 	static : 정적 - 다른 요소와 겹치지 않게 배치, 문서의 흐름의 거슬리지 않게
+	relative : 상대적 ( 다른 요소와 자연스럽게 어울리 수 있도록 ) 
+	fixed	: 고정   ( 절대 좌표 지정 : 화면을 벗어났을때 스크롤이  안보임  )
+	absolute :  부모태그가 존재하는 경우는 가장 가까이 배치된 부모의 위치가  배치 시작점이 된다.
+					단, 부모태그가 없는 경우는 fix처럼 절대좌표의 영향을 받음
+	sticky : 
+	
+	** top, bottom, left, right 속성을 사용해서 배치
+-->
+	<!-- 1. 부모 태그가 존재하는 경우는 부모태그의 위치에 영향을 받아서 위치가 결정됨.  -->
+	<div class="relative">This div element has position: relative;
+  	<div class="absolute">This div element has position:  absolute;</div>
+  	</div>
+	<!--  2. 부모 태그가 없는 경우는 fixed 와 비슷하게 동작 -->
+
+	<div id="cont1"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국</div>
+	<div id="cont2"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국</div>
+	<div id="cont3"> 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국 대한민국</div>
+
+</body>
+</html>

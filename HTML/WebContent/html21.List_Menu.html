@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>UL 가지고 메뉴 만들기</title>
+<style type="text/css">
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+	/* 목록을 한줄로 생성 */
+	/* CSS 속성을 사용 float:left하거나 display:inline목록을 가로로 표시 */
+	li{
+	 	float:left; 
+	}
+	
+	li a{
+		display:block;
+		color: white;
+    	text-align: center;
+    	padding: 16px;
+    	text-decoration: none;
+	}
+	
+	li a:hover{
+		background-color: #aaa;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<ul>
+	  <li><a href="#home">Home</a></li>
+	  <li><a href="#news">News</a></li>
+	  <li><a href="#contact">Contact</a></li>
+	  <li><a href="#about">About</a></li>
+	</ul>
+</body>
+</html>

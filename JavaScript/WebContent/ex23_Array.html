@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Array</title>
+
+</head>
+<body>
+	<h2>자바스크립트 연습</h2>
+	<p id ="demo1"></p>
+	<p id ="demo2">안녕하세요.</p>
+	<p id ="demo3"></p>
+	<p id ="demo4"></p>
+	<p id ="demo5"></p>
+	<p id ="demo6"></p>
+	<p id ="demo7"></p>
+	<p id ="demo8"></p>
+	<p id ="demo9"></p>
+	<p id ="demo10"></p>
+	<p id ="demo11"></p>
+	<p id ="demo12"></p>
+	<p id ="demo13"></p>
+	<p id ="demo14"></p>
+	<p id ="demo15"></p>
+	<hr>
+	<p id ="demo16"></p>
+	<p id ="demo17"></p>
+	<p id ="demo18"></p>
+	<hr>
+	<p id ="demo19"></p>
+	<p id ="demo20"></p>
+	<p id ="demo21"></p>
+	<p id ="demo22"></p>
+	<script type="text/javascript">
+	var person =["홍길동","장길산", "임꺽정", "일지매"];
+	
+	// 현재 문서중 id가 demo1요소를 찾아서
+	//innerHTML  =>  해당 요소에 HTML 가져오거나 설정하기(setter)
+	document.getElementById("demo1").innerHTML = person;
+	
+	// innerHTML = > 해당 요소에 HTML을 가져오거나 설정하기 (getter)
+	var hi = document.getElementById("demo2").innerHTML;
+	document.write(hi + "방가방가");
+	
+	document.getElementById("demo1").innerHTML = "<h2>"+person[2]+"</h2>" ;
+	
+	var person2 ={name:"둘리", addr:"Seoul" , age:14};
+	document.getElementById("demo3").innerHTML = person2["name"];
+	document.getElementById("demo4").innerHTML = person2.addr;
+	
+	 // 배열 요소 추가 가능(push())
+    person.push("세종대왕");
+    document.getElementById("demo5").innerHTML = person;
+    
+    var str ="<ul>";
+    for(var k in person){
+    	str += "<li>" + person[k] + "</li>";
+    }
+    str += "</ul>";
+    document.getElementById("demo6").innerHTML = str;
+    
+ 	// shift : 좌측으로 이동 . 맨 처음 데이터 삭제
+	// unshift() : 새로운 요소가 추가되면서 우측 이동 가능. 맨 처음에 데이터가 삽입
+	// pop() : 맨 오른쪽 데이터 삭제
+	// push() : 맨 마지막에 (오른쪽에)데이터 삽입
+    
+    //배열 요소 삭제 가능 :  pop() -> 가장 마지막 것을 삭제
+    person.pop();	//세종대왕 삭제
+    person.pop();   // 일지매 삭제
+    person.pop();	// 임꺽정 삭제
+    document.getElementById("demo7").innerHTML = person;
+    
+	// shift : 좌측으로 이동 . 맨 처음 데이터 삭제
+	// unshift() : 새로운 요소가 추가되면서 우측 이동 가능. 맨 처음에 데이터가 삽입
+	person.shift();	// 좌측이동 : 맨 좌측의 정보는 삭제된다.
+    document.getElementById("demo8").innerHTML = person;
+	
+    person.unshift("태권브이");	// 새로운 정보가 들어오면서 왼쪽으로 들어오면서 기존 정보가 오른쪽으로 한칸이동
+    document.getElementById("demo9").innerHTML = person;
+    
+    // 문자 정렬 : sort(), reverse(). 대문자 먼저 정렬됨
+    var arr1 = ["Banana", "Orange", "Apple", "Mango", "apple", "mango"];
+    document.getElementById("demo10").innerHTML = arr1;	//순서대로
+    document.getElementById("demo11").innerHTML = arr1.sort();	// 
+    document.getElementById("demo12").innerHTML = arr1.reverse();	
+    
+    var arr2 = ["9", "5", "4", "8", "1", "7"];
+    document.getElementById("demo13").innerHTML = arr2;	//순서대로
+    document.getElementById("demo14").innerHTML = arr2.sort();	
+    document.getElementById("demo15").innerHTML = arr2.reverse();	
+    
+    // 한자리 숫자만 정렬 가능. 숫자가 두자리 이상이면 앞에 자리의 숫자로 정렬
+    var arr3 = [9, 5, 4, 8, 1, 7, 15,  "0", "apple", "aPple"];
+    document.getElementById("demo16").innerHTML = arr3;	//순서대로
+    document.getElementById("demo17").innerHTML = arr3.sort();	//  - 0,1,15,4,5,7,8,9,aPple,apple
+    document.getElementById("demo18").innerHTML = arr3.reverse();	// - apple,aPple,9,8,7,5,4,15,1,0
+    
+    //배열끼리 병합, 잘라내기
+    var arr4 = ["Banana", "Orange", "Apple", "Mango"];
+    var arr5 = ["Lemon", "Kiwi"];
+    
+    //병합 : concat(배열, 배열)
+    var arr6 = arr4.concat(arr5);
+    document.getElementById("demo19").innerHTML =arr6;	
+    //요소제거 : splice(시작위치, 갯수)
+    var arr7 = arr6.splice(2,2);
+    document.getElementById("demo20").innerHTML =arr7;
+    document.getElementById("demo21").innerHTML =arr6;
+    // 삭제된 자리에 "dragon fruit", "durian", "lime"이 삽입
+    var arr8 = arr6.splice(1,2,"dragon fruit", "durian", "lime");
+    document.getElementById("demo22").innerHTML =arr6;
+    
+</script>
+</body>
+</html>

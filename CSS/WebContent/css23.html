@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Align</title>
+<style>
+	.center {
+  		margin: auto;
+  		width: 60%;
+  		border: 3px solid #73AD21;
+  		padding: 10px;
+  		text-align: center;
+	}
+	
+	img#myimg1 {
+  		display: block;
+  		margin: auto;
+	}
+	
+	div#box1{
+		text-align: center;
+	}
+	
+	.right1{
+		position : absolute;
+		bottom: 0px;
+		right: 0px;
+		width : 300px;
+		border: 1px solid blue;
+	  	padding: 10px;
+	}
+	
+	.right2{
+		float : right;
+		width : 300px;
+		border: 1px solid gray;
+	  	padding: 10px;
+	}
+	
+</style>
+</head>
+<body>
+	<!-- 
+		horizontal sort 
+			- block 요소는 margin : auto
+			- 이때, width 속성이 설정되어 있지 않거나 100%로 설정되어 있으면 정렬이 적용되지 않을 수 있음
+	 -->
+	 <h2>Center Align Elements</h2>
+	<p>To horizontally center a block element (like div), use margin: auto;</p>
+
+	<div class="center">
+ 	 	<p><b>Note: </b>Using margin:auto will not work in IE8, unless a !DOCTYPE is declared.</p>
+	</div>
+	
+	<h2>Center an Image</h2>
+	<p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+
+	<img id = "myimg1" src="images/paris.jpg" alt="Paris" style="width:40%">
+	<hr>
+	<div id="box1">
+		<img src="images/pineapple.jpg" alt="Paris" style="width:40%">
+	</div>
+	
+	<hr>
+	
+	<div class="right1">
+		<h2>Right Align : position : absolute </h2>
+  		<p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+	</div>
+	
+	
+	<div class="right2">
+		<h2>Right Align : float : right </h2>
+  		<p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+	</div>
+</body>
+</html>

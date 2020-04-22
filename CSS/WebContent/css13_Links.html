@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Links</title>
+</head>
+<style>
+	/* a:link {color: red;text-decoration: none; }	 */					/* unvisited link */
+	/* a:visited {color: green;text-decoration: none; }		 */		/* visited link */	
+	/* a:hover { color: hotpink;text-decoration: line-through;} */	/* mouse over link */
+	/* a:active { color: blue;text-decoration: underline;} */			/* selected link */
+	
+	a:link, a:visited{
+		background-color:tomato;
+		color:white;
+		margin:5px;
+		padding: 14px 25px;
+		text-align: center;
+		text-decoration: none;
+		display:  inline;  /* inline-block; block;(블록이 꽉차게-세로 꽉차게)  inline;*/
+	}
+	
+	a:hover, a:active{
+		background-color: skyblue;
+		font-family: serif;
+		font-size: 1.5em
+	}
+	
+</style>
+<body>
+<!-- a 링크속성
+	a 밑줄 지우기 : text-decoration : none;
+	a:link - 방문하지 않은 링크
+    a:visited - 방문한 적이 있는 링크
+    a:hover - 마우스를 가져 가면 링크
+    a:active - 클릭했을 때 링크 -->
+<!-- 	<p><b><a href="#" target="_blank">This is a link</a></b></p> -->
+	<a href="#" target="_blank">This is a link 1</a>
+	<a href="#" target="_blank">This is a link 2</a>
+	<a href="#" target="_blank">This is a link 3</a>
+	<a href="#" target="_blank">This is a link 4</a>
+</body>
+</html>

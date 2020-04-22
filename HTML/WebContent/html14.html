@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> map 태그 : 이미지 맵</title>
+</head>
+<body>
+<!-- 하나의 이미지에 여러개의 구역 나누어서 여러개의 링크를 사용할 수 있다. -->
+ <!--1단계 : 해당 이미지에 usemap속성을 지정  -->
+ <img src="img/google2.png" alt="Workplace" usemap="#google">
+ <!--2단계 : map 태그안에 area태그를 만들어서 영역을 잡는다. -->
+ <!--3단계 : 각 영역의 위치 지정하기 (그림판사용)  -->
+ <!--4단계 : img태그(usemap)와 map태그 연결 (name) -->
+  <map name="google">
+     <!-- 사각모양  , 위치 : 시작 x,y  끝 x,y-->
+     <area shape="rect" coords="30,20,100,100" href="https://www.google.com">
+     <!-- 원 , 위치 : 중심점 x, y, 반지름--> 
+     <area shape="circle" coords="290,80,30" href="https://www.naver.com">
+  </map>
+   <hr>
+  <!-- 이미지에 캡션 붙이기 : <figure>-->
+  <!-- <figure><figcaption>내용</figcaption>이미지, 오디오, 비디오 등 미디어파일 </figure> --> 
+  <figure>
+  	  <figcaption>캡션 내용을 입력하는 태그 </figcaption>
+  	  <img src="img/google2.png">
+  	  <img alt="" src="img/google2.png">
+  </figure> 
+  <hr>
+  <figure>
+  	  <img alt="" src="img/google2.png">
+  	  <figcaption>캡션 내용을 입력하는 태그 </figcaption>
+  	  <img alt="" src="img/google2.png">
+  	  <figcaption>캡션 내용을 입력하는 태그 </figcaption>
+  </figure>
+  
+</body>
+</html>
